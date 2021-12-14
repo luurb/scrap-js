@@ -1,0 +1,2846 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9369359bc2.js" crossorigin="anonymous"></script>
+    <title>Bet history</title>
+    <link rel="stylesheet" href="./styles/header1.css">
+<link rel="stylesheet" href="./styles/main1.css">
+<link rel="stylesheet" href="./styles/aside1.css">
+<link rel="stylesheet" href="./styles/style.css">
+<link rel="stylesheet" href="./styles/footer.css">
+
+
+</head>
+<body>
+    <p class="pls"></p>
+    <script src="scripts/add_icons.js"></script>
+    <nav>
+    <div class="logo"><a href="valuebets.php">Value<span class="seclogo">scrap</span></a></div>
+    <input type="checkbox" id="nav-check">
+    <label for="nav-check" class="nav-btn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <div class="nav-wrapper">
+        <div class="left-nav">
+            <ul>
+                <li><a class="active" href="valuebets.php">Valuebets</a></li>
+                <li><a href="bet_history.php">Bet history</a></li>
+                <li><a href="add_bet.php">Add bet</a></li>
+                <li><a href="#"> Tutorials</a></li>    
+            </ul>
+        </div>
+        <input type="checkbox" id="user-check">
+        <label for="user-check" class="user-btn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="right-nav">
+            <ul>
+                <li><a href="#"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                <li><a href="register.php"#><i class="fas fa-user-plus"></i>Sing up</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <section class="section">
+        <main>
+            <div class="nav-box"></div>
+            <section>
+                <div class="table-wrapper">
+                        <form  method="GET" action="delete.php">
+            <table class="v_table">
+                <thead>
+                    <tr>
+                        <th scope="colgroup" class="id-col"><span>ID</span></th>
+                        <th scope="colgroup" class="bookie-col"><span>Bookmaker</span></th>
+                        <th scope="colgroup"><span>Sport</span></th>
+                        <th scope="colgroup"><span>Date and time</span></th>
+                        <th scope="colgroup"><span>Teams</span></th>
+                        <th scope="colgroup"><span>Bet</span></th>
+                        <th scope="colgroup"><span>Odd</span></th>
+                        <th scope="colgroup"><span>Value [%]</span></th>
+                        <th scope="colgroup"><span>Stake</span></th>
+                        <th scope="colgroup" class="result-col">Result</th>
+                        <th scope="colgroup"><span>Return</span></th>
+                        <th scope="colgroup">
+                            <input type="submit" value="Delete" class="filter_button">
+                        </th>
+                        <th scope="colgroup"></th>
+                    </tr>
+                </thead>
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">1</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 12:00:00</td>
+                        <td class="teams-col">Hitech Bangkok City – Bangkok Tiger Thunder</td>
+                        <td>H2(+12.5) OT</td>
+                        <td class="odd-col">2.11</td>
+                        <td>50.8</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>88.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2359" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2359" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">2</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 18:00:00</td>
+                        <td class="teams-col">Prometey Kamenskoe (Women) – HAT-AGRO UNI Gyor (Women)</td>
+                        <td>Over 78.5 1st half</td>
+                        <td class="odd-col">2.27</td>
+                        <td>5.76</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>101.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2358" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2358" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">3</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 20:30:00</td>
+                        <td class="teams-col">Estudiantes Movistar (Women) – Liege (Women)</td>
+                        <td>H1(&minus;13.5) 1st half</td>
+                        <td class="odd-col">2.19</td>
+                        <td>7.31</td> 
+                        <td>80</td> 
+                        <td class="result-col">0</td> 
+                        <td>-80</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2357" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2357" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">4</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 16:30:00</td>
+                        <td class="teams-col">Elazig Il Ozel Idare (Women) – ACS Sepsi SIC (Women)</td>
+                        <td>Under 143.5 OT</td>
+                        <td class="odd-col">2.32</td>
+                        <td>7.35</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>105.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2356" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2356" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">5</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 16:00:00</td>
+                        <td class="teams-col">Dynamo Kursk (Women) – Beretta Famila Schio (Women)</td>
+                        <td>Over 72.5 1st half</td>
+                        <td class="odd-col">2.12</td>
+                        <td>7.47</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>89.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2355" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2355" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">6</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 14:30:00</td>
+                        <td class="teams-col">Nesibe Aydin (Women) – Elitzur Ramla (Women)</td>
+                        <td>Over 74.5 1st half</td>
+                        <td class="odd-col">2.11</td>
+                        <td>7.49</td> 
+                        <td>80</td> 
+                        <td class="result-col">0</td> 
+                        <td>-80</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2354" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2354" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">7</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 18:30:00</td>
+                        <td class="teams-col">Amyntas – Oiakas Nafplio</td>
+                        <td>H1(&minus;34.5) OT</td>
+                        <td class="odd-col">2.22</td>
+                        <td>9.36</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>97.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2353" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2353" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">8</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 18:00:00</td>
+                        <td class="teams-col">Zabiny Brno (Women) – London Lions (Women)</td>
+                        <td>Over 72.5 1st half</td>
+                        <td class="odd-col">2.2</td>
+                        <td>10.5</td> 
+                        <td>80</td> 
+                        <td class="result-col">0</td> 
+                        <td>-80</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2352" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2352" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">9</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 20:00:00</td>
+                        <td class="teams-col">Crvena zvezda (Women) – Olympiacos (Women)</td>
+                        <td>Over 75.5 1st half</td>
+                        <td class="odd-col">2.2</td>
+                        <td>10.9</td> 
+                        <td>80</td> 
+                        <td class="result-col">0</td> 
+                        <td>-80</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2351" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2351" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">10</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-24 14:00:00</td>
+                        <td class="teams-col">Septemvri Sofia U19 – Rangers U19</td>
+                        <td>H2(&minus;1)</td>
+                        <td class="odd-col">1.93</td>
+                        <td>0.54</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>74.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2350" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2350" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">11</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-24 13:00:00</td>
+                        <td class="teams-col">Szentlorinc SE – Vasas</td>
+                        <td>H1(+0.75)</td>
+                        <td class="odd-col">2.11</td>
+                        <td>1.88</td> 
+                        <td>80</td> 
+                        <td class="result-col">0</td> 
+                        <td>-80</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2349" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2349" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">12</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-24 12:00:00</td>
+                        <td class="teams-col">Nakhon Ratchasima – Nakhon Pathom United</td>
+                        <td>Under 0.5 2nd team</td>
+                        <td class="odd-col">2.39</td>
+                        <td>2.34</td> 
+                        <td>80</td> 
+                        <td class="result-col">1</td> 
+                        <td>111.2</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2346" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2346" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">13</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 08:41:00</td>
+                        <td class="teams-col">AKO</td>
+                        <td>AKO players</td>
+                        <td class="odd-col">10.04</td>
+                        <td>4.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2345" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2345" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">14</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 08:41:00</td>
+                        <td class="teams-col">AKO</td>
+                        <td>AKO wins</td>
+                        <td class="odd-col">12.73</td>
+                        <td>4.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>703.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2344" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2344" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">15</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 08:40:00</td>
+                        <td class="teams-col">NBA players</td>
+                        <td>Players</td>
+                        <td class="odd-col">0.724</td>
+                        <td>4.5</td> 
+                        <td>600</td> 
+                        <td class="result-col">1</td> 
+                        <td>-165.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2343" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2343" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">16</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 08:39:00</td>
+                        <td class="teams-col">NBA wins</td>
+                        <td>Wins</td>
+                        <td class="odd-col">1.396</td>
+                        <td>4.5</td> 
+                        <td>180</td> 
+                        <td class="result-col">1</td> 
+                        <td>71.28</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2342" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2342" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">17</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-24 00:00:00</td>
+                        <td class="teams-col">Municipal Perez Zeledon – Sporting San Jose</td>
+                        <td>H2(+0.25)</td>
+                        <td class="odd-col">1.86</td>
+                        <td>1.25</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2341" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2341" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">18</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 20:45:00</td>
+                        <td class="teams-col">Gloucester City – Kidderminster Harriers</td>
+                        <td>Over 1.5 1st team</td>
+                        <td class="odd-col">3.24</td>
+                        <td>7.22</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2339" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2339" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">19</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 01:00:00</td>
+                        <td class="teams-col">Kansas State Wildcats – Illinois Fighting Illini</td>
+                        <td>H1(+9.5) OT</td>
+                        <td class="odd-col">2.17</td>
+                        <td>4.39</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>70.2</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2337" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2337" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">20</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 18:30:00</td>
+                        <td class="teams-col">Vanlose U21 – AB Tarnby U21</td>
+                        <td>H1(&minus;1)</td>
+                        <td class="odd-col">2.63</td>
+                        <td>5.59</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>97.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2335" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2335" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">21</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 23:45:00</td>
+                        <td class="teams-col">Racing Club de Montevideo – Juventud de Las Piedras</td>
+                        <td>Under 2.5</td>
+                        <td class="odd-col">1.82</td>
+                        <td>5.55</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2333" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2333" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">22</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 21:00:00</td>
+                        <td class="teams-col">Barcelona – Benfica</td>
+                        <td>H1(&minus;0.75)</td>
+                        <td class="odd-col">1.77</td>
+                        <td>2.98</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2332" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2332" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">23</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 20:45:00</td>
+                        <td class="teams-col">Crawley Town – Newport County</td>
+                        <td>Under 2.5</td>
+                        <td class="odd-col">1.81</td>
+                        <td>1.63</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>48.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2331" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2331" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">24</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 20:45:00</td>
+                        <td class="teams-col">Boston United – Darlington</td>
+                        <td>H1(&minus;1)</td>
+                        <td class="odd-col">2.79</td>
+                        <td>2.06</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>107.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2330" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2330" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">25</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 01:00:00</td>
+                        <td class="teams-col">North Carolina Tar Heels – UNC Asheville Bulldogs</td>
+                        <td>Over 154 OT</td>
+                        <td class="odd-col">1.9</td>
+                        <td>4.16</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2329" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2329" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">26</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 21:00:00</td>
+                        <td class="teams-col">Sevilla – VfL Wolfsburg</td>
+                        <td>Under 2.75</td>
+                        <td class="odd-col">1.71</td>
+                        <td>6.87</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>42.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2328" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2328" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">27</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 01:00:00</td>
+                        <td class="teams-col">UMBC Retrievers – American Eagles</td>
+                        <td>Over 141.5 OT</td>
+                        <td class="odd-col">2.15</td>
+                        <td>4.48</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>69</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2327" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2327" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">28</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 03:30:00</td>
+                        <td class="teams-col">Washington Huskies – South Dakota State Jackrabbits</td>
+                        <td>H1(+7.5) OT</td>
+                        <td class="odd-col">1.9</td>
+                        <td>4.18</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>54</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2326" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2326" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">29</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 01:30:00</td>
+                        <td class="teams-col">Providence Friars – Virginia Cavaliers</td>
+                        <td>1 OT</td>
+                        <td class="odd-col">1.86</td>
+                        <td>4.3</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2325" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2325" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">30</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 21:00:00</td>
+                        <td class="teams-col">Bolton Wanderers – Doncaster Rovers</td>
+                        <td>H1(&minus;1)</td>
+                        <td class="odd-col">2.14</td>
+                        <td>1.48</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>68.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2324" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2324" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-unknown">
+                    <tr>
+                        <td class="id-col">31</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 02:00:00</td>
+                        <td class="teams-col">Wake Forest Demon Deacons – Kennesaw State Owls</td>
+                        <td>H2(+8.5) 1st half</td>
+                        <td class="odd-col">2.28</td>
+                        <td>4.32</td> 
+                        <td>1</td> 
+                        <td class="result-col">-</td> 
+                        <td>0</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2323" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2323" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">32</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 21:00:00</td>
+                        <td class="teams-col">Club Sportivo Barracas – Club Atletico Argentino Rosario</td>
+                        <td>H2(&minus;0.25)</td>
+                        <td class="odd-col">2.8</td>
+                        <td>0.37</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2322" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2322" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">33</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 18:00:00</td>
+                        <td class="teams-col">Southern Utah Thunderbirds – Yale</td>
+                        <td>H1(&minus;2.5) OT</td>
+                        <td class="odd-col">2.63</td>
+                        <td>5.37</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>97.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2321" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2321" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">34</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 23:30:00</td>
+                        <td class="teams-col">Coastal Carolina Chanticleers – Valparaiso Beacons</td>
+                        <td>2 OT</td>
+                        <td class="odd-col">1.75</td>
+                        <td>6.09</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2320" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2320" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">35</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 02:00:00</td>
+                        <td class="teams-col">Texas Tech Red Raiders – Nebraska-Omaha Mavericks</td>
+                        <td>H1(&minus;17.5) 1st half</td>
+                        <td class="odd-col">1.93</td>
+                        <td>69.1</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>55.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2319" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2319" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">36</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 23:00:00</td>
+                        <td class="teams-col">Oakland Golden Grizzlies – Rice Owls</td>
+                        <td>H1(&minus;3.5) OT</td>
+                        <td class="odd-col">2.51</td>
+                        <td>6.09</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2318" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2318" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">37</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 20:45:00</td>
+                        <td class="teams-col">Plymouth Argyle – Wycombe Wanderers</td>
+                        <td>Over 2.75</td>
+                        <td class="odd-col">1.88</td>
+                        <td>0.19</td> 
+                        <td>30</td> 
+                        <td class="result-col">1</td> 
+                        <td>26.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2317" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2317" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">38</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 20:30:00</td>
+                        <td class="teams-col">Helios (Women) – Geneve Elite (Women)</td>
+                        <td>H1(&minus;10.5) 1st half</td>
+                        <td class="odd-col">2.18</td>
+                        <td>4.15</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>70.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2316" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2316" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">39</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 20:45:00</td>
+                        <td class="teams-col">Port Vale – Walsall</td>
+                        <td>Over 2.25</td>
+                        <td class="odd-col">2.13</td>
+                        <td>0.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2315" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2315" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">40</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 16:00:00</td>
+                        <td class="teams-col">CSA Steaua – Universitatea Cluj</td>
+                        <td>Over 2.25</td>
+                        <td class="odd-col">2.1</td>
+                        <td>0.42</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2314" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2314" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">41</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 01:00:00</td>
+                        <td class="teams-col">George Mason Patriots – Nevada Wolf Pack</td>
+                        <td>Over 140.5 OT</td>
+                        <td class="odd-col">2.28</td>
+                        <td>7.97</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>76.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2313" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2313" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">42</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-24 01:30:00</td>
+                        <td class="teams-col">New York Knicks – Los Angeles Lakers</td>
+                        <td>H1(&minus;3.5) OT</td>
+                        <td class="odd-col">1.83</td>
+                        <td>11.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>49.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2312" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2312" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">43</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 14:30:00</td>
+                        <td class="teams-col">Queens Park Rangers U23 – Cardiff City U23</td>
+                        <td>H1(0)</td>
+                        <td class="odd-col">2.14</td>
+                        <td>0.67</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2311" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2311" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">44</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 15:00:00</td>
+                        <td class="teams-col">Malmo U19 – Zenit Saint Petersburg U19</td>
+                        <td>H1(0)</td>
+                        <td class="odd-col">2.53</td>
+                        <td>1.2</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2310" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2310" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">45</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 18:00:00</td>
+                        <td class="teams-col">Rudar Labin – Novigrad</td>
+                        <td>2 1st period</td>
+                        <td class="odd-col">2.52</td>
+                        <td>0.77</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2309" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2309" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">46</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 16:00:00</td>
+                        <td class="teams-col">Wydad Casablanca – Renaissance Sportive de Berkane</td>
+                        <td>H1(&minus;0.25)</td>
+                        <td class="odd-col">1.74</td>
+                        <td>0.63</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>44.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2308" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2308" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">47</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 15:25:00</td>
+                        <td class="teams-col">Al-Sahel Al-Qatif – Bisha</td>
+                        <td>H2(0)</td>
+                        <td class="odd-col">2.52</td>
+                        <td>4.02</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2307" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2307" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">48</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 15:25:00</td>
+                        <td class="teams-col">Al-Sahel Al-Qatif – Bisha</td>
+                        <td>Under 2</td>
+                        <td class="odd-col">2.05</td>
+                        <td>3.34</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2306" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2306" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">49</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 16:00:00</td>
+                        <td class="teams-col">Barcelona U19 – S.L. Benfica U19</td>
+                        <td>H2(&minus;1)</td>
+                        <td class="odd-col">2.14</td>
+                        <td>0.23</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>68.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2305" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2305" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">50</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 23:00:00</td>
+                        <td class="teams-col">Houston Cougars – Wisconsin Badgers</td>
+                        <td>Over 57.5 1st half</td>
+                        <td class="odd-col">2.24</td>
+                        <td>5.73</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>74.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2304" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2304" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">51</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 18:00:00</td>
+                        <td class="teams-col">PEAC-Pecs (Women) – Kayseri Kaski S.K (Women)</td>
+                        <td>Over 73.5 1st half</td>
+                        <td class="odd-col">2.39</td>
+                        <td>12.9</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>83.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2303" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2303" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">52</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 19:00:00</td>
+                        <td class="teams-col">Panathinaikos (Women) – Enisey (Women)</td>
+                        <td>Over 71.5 1st half</td>
+                        <td class="odd-col">2.5</td>
+                        <td>17.4</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>90</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2302" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2302" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">53</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 13:30:00</td>
+                        <td class="teams-col">Yantra Gabrovo – Levski 2020 Lom</td>
+                        <td>1(0:1)</td>
+                        <td class="odd-col">3.15</td>
+                        <td>0.38</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>129</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2301" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2301" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">54</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 17:00:00</td>
+                        <td class="teams-col">Al-Hilal Riyadh – Pohang Steelers</td>
+                        <td>H2(0) 1st period</td>
+                        <td class="odd-col">4.28</td>
+                        <td>7.31</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2300" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2300" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">55</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 15:00:00</td>
+                        <td class="teams-col">Dynamo Kyiv U19 – Bayern Munich U19</td>
+                        <td>Over 3.25</td>
+                        <td class="odd-col">1.95</td>
+                        <td>1.16</td> 
+                        <td>30</td> 
+                        <td class="result-col">0</td> 
+                        <td>-30</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2299" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2299" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">56</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 14:30:00</td>
+                        <td class="teams-col">Lille OSC U19 – Salzburg U19</td>
+                        <td>H2(&minus;1)</td>
+                        <td class="odd-col">2.18</td>
+                        <td>2.97</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2298" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2298" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">57</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 19:00:00</td>
+                        <td class="teams-col">OKK Beograd - KK Vojvodina</td>
+                        <td>Under 155.5</td>
+                        <td class="odd-col">3.05</td>
+                        <td>4.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2297" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2297" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">58</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 13:30:00</td>
+                        <td class="teams-col">Sozopol – Maritsa Plovdiv</td>
+                        <td>1(0:1)</td>
+                        <td class="odd-col">4.6</td>
+                        <td>2.24</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2296" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2296" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">59</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 14:00:00</td>
+                        <td class="teams-col">Midtjylland U19 – Trabzonspor U19</td>
+                        <td>H1(&minus;2)</td>
+                        <td class="odd-col">1.84</td>
+                        <td>0.96</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>50.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2295" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2295" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">60</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 18:00:00</td>
+                        <td class="teams-col">Southern Utah Thunderbirds – Yale</td>
+                        <td>H2(&minus;3.5) OT</td>
+                        <td class="odd-col">2.39</td>
+                        <td>4.23</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2294" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2294" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">61</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 13:05:00</td>
+                        <td class="teams-col">Al-Kawkab – Al-Nahda Club Al-Khobar</td>
+                        <td>H1(&minus;0.25)</td>
+                        <td class="odd-col">2.1</td>
+                        <td>0.39</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>66</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2293" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2293" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">62</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 14:05:00</td>
+                        <td class="teams-col">Hajer Club – Al Draih</td>
+                        <td>H2(0)</td>
+                        <td class="odd-col">3.15</td>
+                        <td>2.79</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>129</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2292" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2292" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">63</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 14:00:00</td>
+                        <td class="teams-col">Villarreal U19 – Manchester United U19</td>
+                        <td>H2(0)</td>
+                        <td class="odd-col">2.03</td>
+                        <td>0.96</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>61.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2291" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2291" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">64</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-23 13:25:00</td>
+                        <td class="teams-col">Najran – Al Kholood</td>
+                        <td>H1(&minus;0.75)</td>
+                        <td class="odd-col">2.06</td>
+                        <td>2.26</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2290" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2290" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">65</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 09:30:00</td>
+                        <td class="teams-col">AKO</td>
+                        <td>AKO players</td>
+                        <td class="odd-col">20.83</td>
+                        <td>4.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2288" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2288" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">66</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 09:30:00</td>
+                        <td class="teams-col">AKO</td>
+                        <td>AKO wins</td>
+                        <td class="odd-col">9.57</td>
+                        <td>4.5</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2287" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2287" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">67</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 09:29:00</td>
+                        <td class="teams-col">NBA players</td>
+                        <td>Players</td>
+                        <td class="odd-col">1.209</td>
+                        <td>4.5</td> 
+                        <td>1200</td> 
+                        <td class="result-col">1</td> 
+                        <td>250.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2286" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2286" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">68</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 09:28:00</td>
+                        <td class="teams-col">NBA wins</td>
+                        <td>Wins</td>
+                        <td class="odd-col">0.55</td>
+                        <td>4.5</td> 
+                        <td>420</td> 
+                        <td class="result-col">1</td> 
+                        <td>-189</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2285" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2285" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">69</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 02:00:00</td>
+                        <td class="teams-col">UCLA Bruins – Bellarmine Knights</td>
+                        <td>H2(&minus;23.5) OT</td>
+                        <td class="odd-col">2.38</td>
+                        <td>4.57</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2284" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2284" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">70</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">Stoke City U23 – Southend United U23</td>
+                        <td>H2(1)</td>
+                        <td class="odd-col">2.4</td>
+                        <td>3.21</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2283" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2283" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">71</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">Alfonso Ugarte de Puno – Los Caimanes</td>
+                        <td>H1(&minus;1.25)</td>
+                        <td class="odd-col">2.19</td>
+                        <td>6.33</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>71.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2282" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2282" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">72</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">Seraing United U21 – Royale Union Saint-Gilloise U21</td>
+                        <td>1</td>
+                        <td class="odd-col">3.16</td>
+                        <td>0.17</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2281" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2281" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">73</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 19:30:00</td>
+                        <td class="teams-col">Standard Liege U21 – Oud-Heverlee Leuven U21</td>
+                        <td>H2(+1)</td>
+                        <td class="odd-col">1.77</td>
+                        <td>0.12</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2279" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2279" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">74</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">Lierse U21 – RWD Molenbeek U21</td>
+                        <td>H2(0)</td>
+                        <td class="odd-col">2.1</td>
+                        <td>1.41</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>66</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2277" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2277" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">75</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">Everton U23 – Brighton & Hove Albion U23</td>
+                        <td>H1(&minus;0.25)</td>
+                        <td class="odd-col">2.94</td>
+                        <td>0.08</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>116.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2276" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2276" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">76</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">West Bromwich Albion U23 – Reading U23</td>
+                        <td>H2(+1)</td>
+                        <td class="odd-col">2.19</td>
+                        <td>0.86</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>71.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2275" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2275" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">77</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 19:45:00</td>
+                        <td class="teams-col">Kukesi – KF Tirana</td>
+                        <td>H1(&minus;0.25)</td>
+                        <td class="odd-col">3.54</td>
+                        <td>0.25</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>152.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2274" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2274" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">78</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 04:00:00</td>
+                        <td class="teams-col">Arkansas-Pine Bluff Golden Lions – Seattle Redhawks</td>
+                        <td>Over 148.5 OT</td>
+                        <td class="odd-col">2.28</td>
+                        <td>5.14</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2273" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2273" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">79</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 19:00:00</td>
+                        <td class="teams-col">Meppen – Viktoria Koln</td>
+                        <td>Under 2.5</td>
+                        <td class="odd-col">2.08</td>
+                        <td>0.66</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2272" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2272" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">80</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 19:00:00</td>
+                        <td class="teams-col">SonderjyskE – AaB Fodbold</td>
+                        <td>H1(0)</td>
+                        <td class="odd-col">2.54</td>
+                        <td>2.69</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2271" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2271" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">81</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 03:00:00</td>
+                        <td class="teams-col">Grand Canyon Antelopes – Wyoming Cowboys</td>
+                        <td>Under 132.5 OT</td>
+                        <td class="odd-col">2.22</td>
+                        <td>8.21</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>73.2</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2270" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2270" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">82</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 18:00:00</td>
+                        <td class="teams-col">Trabzonspor – Gazisehir Gaziantep</td>
+                        <td>H2(+1)</td>
+                        <td class="odd-col">1.84</td>
+                        <td>2.69</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2269" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2269" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">83</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 18:30:00</td>
+                        <td class="teams-col">Heerenveen II – Almere City II</td>
+                        <td>Over 2.5 1st team</td>
+                        <td class="odd-col">2.6</td>
+                        <td>0.85</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>96</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2268" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2268" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">84</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 03:00:00</td>
+                        <td class="teams-col">Kansas State Wildcats – Arkansas Razorbacks</td>
+                        <td>H1(+6.5) OT</td>
+                        <td class="odd-col">2.38</td>
+                        <td>4.44</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2267" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2267" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">85</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 19:30:00</td>
+                        <td class="teams-col">Oakland Golden Grizzlies – Vermont Catamounts</td>
+                        <td>H1(-1.5)</td>
+                        <td class="odd-col">2.96</td>
+                        <td>4.84</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>117.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2266" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2266" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">86</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 18:00:00</td>
+                        <td class="teams-col">Sandecja Nowy Sacz – Widzew Lodz</td>
+                        <td>H2(+0.25)</td>
+                        <td class="odd-col">1.75</td>
+                        <td>0.37</td> 
+                        <td>30</td> 
+                        <td class="result-col">1</td> 
+                        <td>22.5</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2265" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2265" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">87</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">Aston Villa U23 – Burnley U23</td>
+                        <td>H2(+0.75)</td>
+                        <td class="odd-col">2.2</td>
+                        <td>0.45</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2264" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2264" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">88</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 23:30:00</td>
+                        <td class="teams-col">Murray State Racers – East Tennessee State Buccaneers</td>
+                        <td>H1(&minus;7.5) OT</td>
+                        <td class="odd-col">2.66</td>
+                        <td>5.08</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2263" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2263" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">89</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 01:00:00</td>
+                        <td class="teams-col">Cleveland Cavaliers – Brooklyn Nets</td>
+                        <td>Over 208.5 OT</td>
+                        <td class="odd-col">2.01</td>
+                        <td>5.38</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>60.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2262" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2262" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">90</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-23 03:00:00</td>
+                        <td class="teams-col">Idaho State Bengals – Kansas City Roos</td>
+                        <td>H1(&minus;1) OT</td>
+                        <td class="odd-col">1.94</td>
+                        <td>4.65</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2261" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2261" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">91</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 19:30:00</td>
+                        <td class="teams-col">Oakland Golden Grizzlies – Vermont Catamounts</td>
+                        <td>Over 135.5 OT</td>
+                        <td class="odd-col">2.29</td>
+                        <td>4.75</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2260" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2260" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">92</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 21:00:00</td>
+                        <td class="teams-col">Club Defensores de Cambaceres – Club Social y Deportivo Muniz</td>
+                        <td>Over 2.25</td>
+                        <td class="odd-col">2</td>
+                        <td>0.11</td> 
+                        <td>30</td> 
+                        <td class="result-col">0</td> 
+                        <td>-30</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2259" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2259" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">93</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 15:00:00</td>
+                        <td class="teams-col">Cukaricki – Novi Pazar</td>
+                        <td>Under 3.5</td>
+                        <td class="odd-col">1.74</td>
+                        <td>0.65</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>44.4</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2258" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2258" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">94</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Basketball</span></td>
+                        <td class="date-col">2021-11-22 23:30:00</td>
+                        <td class="teams-col">Jacksonville State Gamecocks – Valparaiso Beacons</td>
+                        <td>Over 59.5 1st half</td>
+                        <td class="odd-col">2.23</td>
+                        <td>5.09</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>73.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2257" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2257" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">95</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">AFC Ajax II – Roda JC Kerkrade</td>
+                        <td>Under 3.75</td>
+                        <td class="odd-col">1.8</td>
+                        <td>5.97</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>48</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2256" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2256" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">96</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 20:00:00</td>
+                        <td class="teams-col">PSV Eindhoven II – NAC Breda</td>
+                        <td>Under 3.25</td>
+                        <td class="odd-col">1.73</td>
+                        <td>3.21</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>43.8</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2255" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2255" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">97</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 14:00:00</td>
+                        <td class="teams-col">Kuala Lumpur – Melaka United</td>
+                        <td>Under 2.5</td>
+                        <td class="odd-col">1.76</td>
+                        <td>0.07</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>45.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2253" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2253" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">98</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 14:00:00</td>
+                        <td class="teams-col">Umm Salal – Al-Wakrah</td>
+                        <td>H1(0)</td>
+                        <td class="odd-col">2.75</td>
+                        <td>18.8</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2252" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2252" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-win">
+                    <tr>
+                        <td class="id-col">99</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 15:00:00</td>
+                        <td class="teams-col">Roma U19 – Bologna 1909 U19</td>
+                        <td>Over 3.25</td>
+                        <td class="odd-col">1.81</td>
+                        <td>1.52</td> 
+                        <td>60</td> 
+                        <td class="result-col">1</td> 
+                        <td>48.6</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2251" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2251" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                                <tbody class="td-lose">
+                    <tr>
+                        <td class="id-col">100</td>
+                        <td class="bookie-col">22​bet</td>
+                        <td class="sport-col"><span>Football</span></td>
+                        <td class="date-col">2021-11-22 16:45:00</td>
+                        <td class="teams-col">KS Dinamo Tirana – Egnatia</td>
+                        <td>H1(&minus;0.75)</td>
+                        <td class="odd-col">2.05</td>
+                        <td>1.24</td> 
+                        <td>60</td> 
+                        <td class="result-col">0</td> 
+                        <td>-60</td> 
+                        <td>
+                            <label>
+                                <input type="checkbox" value="2250" name="del[]" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td>
+                        </form>
+                        <td>
+                            <form method="GET" action="modify.php">
+                                <button type="submit" value="2250" name="submit" class="modify_button">Modify</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody> 
+                         
+            </table>
+               
+                </div>
+            </section>
+        </main>
+        <aside>
+            <input type="checkbox" id="stat-check">
+            <div class="filter-wrapper">
+                <label for="stat-check" class="stat-filter" title="Show stats">
+                    <i class="fas fa-cog"></i>
+                </label>
+            </div>
+            <div class="aside-option">
+                                    <span class="wrapper-header">All time stats</span>
+                <div class="stats-wrapper">
+                    <div class="stat-box">
+                        <span class="stat-header">Return</span>
+                        <span class="stat-value">5604.19</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-header">Yield</span>
+                        <span class="stat-value">7.33%</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-header">Avg value</span>
+                        <span class="stat-value">5.55%</span>
+                    </div>
+                </div>
+                <span class="wrapper-header">Set time stats</span>
+                <div class="stats-wrapper">
+                    <div class="stat-box">
+                        <span class="stat-header">Return</span>
+                        <span class="stat-value">5604.19</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-header">Yield</span>
+                        <span class="stat-value">7.33%</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-header">Avg value</span>
+                        <span class="stat-value">7.33%</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-header">Time range </span>
+                        <form method="GET" action="bet_history.php">
+                            <input type="date" name="first_date">
+                            <span class="stat-header">/</span>
+                            <input type="date" name="second_date">
+                            <input type="submit" name="submit" class="date-submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </section>
+    <footer>
+    <div class="footer-top">
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Tutorials</a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        Copyright &copy 2021 ValueScrap. All Rights Reserved.
+    </div>
+</footer>   
+<script src="scripts/stat-filter.js"></script>
+</body>
+</html>

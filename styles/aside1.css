@@ -1,0 +1,117 @@
+aside{
+    background: #ededed;
+    z-index: 1;
+}
+aside input{
+    font-family: 'Lato', sans-serif;
+    border: 0;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+aside .aside-option{
+    margin-top: 40px;
+    border-top: 2px solid #cdcdcd;
+    transition: all 0.3s ease;
+}
+aside .stats-wrapper{
+    padding: 20px 30px;
+    border-bottom: 2px solid #cdcdcd;
+}
+aside .stat-box{
+    padding-bottom: 10px;
+    text-align: center;
+}
+aside .stat-box span{
+    display: block;
+    padding: 2px 0px;
+}
+aside .stat-box .stat-header{
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+aside .stat-box .stat-value{
+    padding: 5px;
+    background: #1b1b1b;
+    color: #fff;
+    border-radius: 10px;
+}
+aside .stat-box input{
+    width: 100%;
+}
+aside .wrapper-header{
+    padding-top: 5px;
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+aside .stat-box .date-submit{
+    width: 50%;
+    margin-top: 15px;
+    background: #fff;
+    font-size: 16px;
+    color: #1b1b1b;
+    transition: all 0.3s ease;
+}
+aside .stat-box .date-submit:hover{
+    color: #1c1caa;
+    font-weight: 600;
+}
+aside .stat-box .filter-button{
+    width: 80%;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+aside .stat-box .unfilter{
+    background: #fff;
+}
+aside .stat-box .filter{
+    background: #4da876;
+    color: #fff;
+}
+aside .stat-box .filter:hover{
+    background: #5eb987;
+}
+aside .filter-wrapper{
+    width: 220px;
+    height: 40px;
+    font-size: 28px;
+    text-align: center;
+    padding: 5px;
+    display: none;
+}
+
+aside .stat-filter i{
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+
+#stat-check{
+    display: none;
+}
+
+@media (max-width: 1430px){
+    aside,
+    aside .aside-option{
+        position: fixed;
+        right: -100%;
+        top: 120px;
+        width: 220px;
+    }
+    aside .filter-wrapper{
+        position: fixed;
+        right: 0;
+        top: 80px;
+        display: block;
+    }
+    aside .aside-option{
+        margin: 0;
+    }
+    #stat-check:checked ~ .aside-option{
+        right: 0;
+        background: #ededed;
+    }
+}

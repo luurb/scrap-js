@@ -1,0 +1,36 @@
+footer{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    background: #1b1b1b;
+    color: #6c6c6c;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 2px solid #cdcdcd;
+}
+footer .footer-top{
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    align-items: center;
+}
+footer ul{
+    display: flex;
+    list-style: none;
+}
+footer ul li a{
+    text-decoration: none;
+    padding: 0px 20px;
+    color: #6c6c6c;
+    transition: all 0.3s ease;
+}
+footer ul li a:hover{
+    color: #fff;
+}
+
+footer .footer-bottom{
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 1px;
+}

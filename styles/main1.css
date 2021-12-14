@@ -1,0 +1,212 @@
+.section{
+    font-family: 'Lato', sans-serif;
+    background: #f7f7f7;
+    height: 100vh;
+    width: 100%;
+}
+.section main section{
+    padding: 30px 20px;
+    height: 100%;
+    width: 100%;
+}
+.table-wrapper{
+    height: calc(100% - 30px);
+    overflow: auto;
+    box-shadow: -5px 10px 10px #cdcdcd;
+}
+
+main section table{
+    background: #ededed;
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+main section table th,
+main section table td{
+    padding: 5px 8px;
+}
+main section table td a{
+    text-decoration: none;
+    color: #1c1caa;
+}
+main section table td a:hover{
+    text-decoration: underline;
+}
+main section table th{
+    font-size: 18px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cdcdcd;
+}
+main section table tbody:nth-child(even){
+    background: #f7f7f7;
+}
+main .nav-box{
+    height: 40px;
+    background: #ededed;
+    box-shadow: 0 5px 10px #cdcdcd;
+    padding: 5px;
+}
+main section table input,
+main section table select,
+main section table tbody button{
+    width: 100%;
+    color: #1b1b1b;
+    background: #cdcdcd;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease;
+}
+main section table th input{
+    text-transform: uppercase;
+}
+main section table tbody td i{
+    font-style: normal;
+}
+main section table input[type="submit"]:hover,
+main section table tbody button:hover{
+    background: #1b1b1b;
+    color: #fff;
+}
+main section table input:hover,
+main section table input[type="text"]:focus,
+main section table select:hover,
+main section table select:focus{
+    background: #fff;
+}
+main section table tbody label{
+    margin: 10px;
+    cursor: pointer;
+}
+main section table tbody .add-delete-btn{
+    display: inline-block;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+main section table .ball-img{
+    width: 20px;
+}
+main section table td img{
+    display: none;
+}
+main section table .teams-col{
+    width: 30%;
+}
+main section table .sport-col,
+main section table .bet-col{
+    width: 10%;
+}
+main section table .odd-col{
+    width: 5%;
+}
+main section table .modify-button{
+    background: #fff;
+}
+main section table tbody input[type="checkbox"]{
+    display: none;
+}
+main section table tbody .del-checkbox[type="checkbox"]:checked ~ span{
+    background: #dd968e;
+}
+main section table tbody .add-checkbox[type="checkbox"]:checked ~ span{
+    background: #5eb987;
+}
+.td-win td:nth-child(11),
+.td-win td:nth-child(5){
+    color: #2d9129; 
+    font-weight: 600;
+}
+
+.td-lose td:nth-child(11),
+.td-lose td:nth-child(5){
+    color: #ae1b16; 
+    font-weight: 600;
+}
+@media (max-width: 1700px){
+    main section .add-table{
+        display: flex;
+    }
+    main section .add-table tbody,
+    main section .add-table thead{
+        display: flex;
+        width: 100%;
+    }
+    main section .add-table tr{
+        display: block;
+        width: 100%;
+    }
+    main section .add-table td,
+    main section .add-table th{
+        display: block;
+        width: 100%;
+        height: 60px;
+        padding: 15px;
+        font-size: 20px;
+    }
+    main section .add-table input,
+    main section .add-table select{
+        padding: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+    main section table .modify-button{
+        border: 1px solid #1b1b1b;
+    }
+    main section table .id-col{
+        display: none;
+    }
+}
+@media (max-width: 1430px){
+    main .nav-box .stat-narrow{
+        display: block;
+    }
+    main .nav-box{
+        position: sticky;
+        top: 80px;
+    }
+    main section table th,
+    main section table td{
+        padding: 5px;
+    }
+    main section table .id-col,
+    main section table .result-col{
+        display: none;
+    }
+    main section table th,
+    main section table th input{
+        font-size: 16px;
+        text-transform: none;
+    }
+    main section table input,
+    main section table tbody .add-delete-btn,
+    main section table tbody button{
+        padding: 5px;
+        margin: 2px 0;
+    }
+}
+@media (max-width: 1200px){
+    main section table td img{
+        display: inline-block;
+    }
+    main section table .sport-col span{
+        display: none;
+    }
+}
+@media (max-width: 950px){
+    main section table .bookie-col{
+        display: none;
+    }
+    main section table th,
+    main section table td{
+        padding: 10px 5px;
+    }
+
+}
