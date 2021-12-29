@@ -10,24 +10,11 @@ class Main extends IDbInit
         $this->var_button = $var_button;
     }
 
-    //Init page by scraping data.
-    public function pageInit()
-    {
-        $addr = self::ADDR;
-        $scraper = new ScraperInit("$addr");
-        return $scraper->scrapeInit();
-    }
-
     //Print page with filtered or unfitered data.
     public function printResults()
     {
-        $db_obj = $this->dbConnect();
-      
-        $print_page = new PrintValuebets();
-        $db_connect->dbPrintFilter($db_obj);
-        $tr_children_list = $this->pageInit();
-        $db_connect->dbTimeFilter($db_obj);
-        //$print_page->printResults($db_obj);          
+      $results = new PrintValuebets();
+      $results->printResults();
     }
 
     //Function adding HTML code which print button with correct value

@@ -12,7 +12,7 @@ class CreateJSON
         return $scraper->scrapeInit();
     }
 
-
+    //Function create and return values of each game in JSON format
     public function returnJSON()
     {
         $tr_children_list = $this->scrapeInit();
@@ -25,36 +25,28 @@ class CreateJSON
         return json_encode($json_array);
     }
 
-     //Function return array of values from each game
-     public function getValues($game, $iter)
-     {
-         $var = explode(" ", $game->item(0)->nodeValue);
-         $bookie = $var[0];
-         $sport = $var[1];
-         if ($sport == "Dota" || $sport == "League of Legends" || $sport == "Counter-Strike"
-             || $sport == "Valorant" || $sport == "Rainbow")
-             $sport = "Esport";
-         $date_time = $game->item(2)->nodeValue;
-         $var = explode("[", $game->item(4)->nodeValue);
-         $teams = $var[0];
-         $bet = $game->item(6)->nodeValue;
-         $odd = floatval($game->item(8)->nodeValue);
-         $value = $game->item(14)->nodeValue;
-         $value = rtrim($value, "%");
-         $value = ltrim($value, "+");
-         $value = floatval($value);
+    //Function return array of values from each game
+    public function getValues($game, $iter)
+    {
+        $var = explode(" ", $game->item(0)->nodeValue);
+        $bookie = $var[0];
+        $sport = $var[1];
+        if ($sport == "Dota" || $sport == "League of Legends" || $sport == "Counter-Strike"
+            || $sport == "Valorant" || $sport == "Rainbow")
+            $sport = "Esport";
+        $date_time = $game->item(2)->nodeValue;
+        $var = explode("[", $game->item(4)->nodeValue);
+        $teams = $var[0];
+        $bet = $game->item(6)->nodeValue;
+        $odd = floatval($game->item(8)->nodeValue);
+        $value = $game->item(14)->nodeValue;
+        $value = rtrim($value, "%");
+        $value = ltrim($value, "+");
+        $value = floatval($value);
 
-         $array = array (
-             "iter" => $iter,
-             "bookie" => $bookie,
-             "sport" => $sport,
-             "date" => $date_time,
-             "teams" => $teams,
-             "bet" => $bet,
-             "odd" => $odd,
-             "value" => $value
-         );
-         return $array;
-     }
+        $array = array ($iter, $bookie, $sport, $date_time, $teams,
+                    $bet, $odd, $value);
+        return $array;
+    }
 
 }

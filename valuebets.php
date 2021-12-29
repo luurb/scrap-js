@@ -11,6 +11,7 @@
 <body>
     <script src="scripts/add_icons.js"></script>
     <script src="scripts/stat-filter.js" defer></script>
+    <script src="feed/scripts/fetch.js"></script>
 
     <?php include('html/header.html'); ?>
     <section class="section">
