@@ -1,16 +1,11 @@
-<?php 
-    session_start(); 
-    $rand = rand(60, 100);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="<?=$rand?>" URL="localhost/scrap/valuebets.php">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9369359bc2.js" crossorigin="anonymous"></script>
-    <title>ValueScrap</title>
+    <title>Valuescrap</title>
     <?php include('html/css.html'); ?>
 </head>
 <body>
