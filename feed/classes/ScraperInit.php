@@ -30,8 +30,8 @@ class ScraperInit
             $tbody_children_lists [] = $tbody->childNodes;
         }
 
-        //Now create DOMNodeList of children for every tr tag. Tr tag is located 
-        //in every tbody_children_list in item nr 2 (item(1)).
+        //Now create DOMNodeList of children for every tr tag. 
+        //Tr tag is located in every tbody_children_list in item nr 2 (item(1)).
         $tr_children_lists = array();
         foreach ($tbody_children_lists as $child_list) {
             $tr_children_lists [] = $child_list->item(1)->childNodes;
