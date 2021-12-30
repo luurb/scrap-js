@@ -1,6 +1,7 @@
 function fetchJSON() {
     let request = new XMLHttpRequest();
     makeRequest();
+
     function makeRequest() {
         request.onreadystatechange = checkConnection;
         request.open('GET', './feed/json.php');
@@ -8,6 +9,7 @@ function fetchJSON() {
         request.send();
     }
 
+    //Function check if response status is correct
     function checkConnection() {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
@@ -18,11 +20,21 @@ function fetchJSON() {
         }
     }
 
+    //Functiion print main table with games
     function print() {
         const games = JSON.parse(request.response);
         let table = document.getElementsByTagName('table');
+        let tbody = document.getElementsByTagName('tbody');
+        let length = tbody.length;
+        
+        //Delete old body of games table
+        while (length) {
+            tbody[0].remove();
+            --length;
+        }
+
         for (let i = 0; i < games.length; i++) {
-            let tbody = document.createElement('tbody');
+            tbody = document.createElement('tbody');
             let tr = document.createElement('tr');
             for (let j = 0; j < games[i].length; j++) {
                 let td = document.createElement('td');
@@ -42,7 +54,7 @@ function fetchJSON() {
             table[0].appendChild(tbody);
         }
     }
+    setInterval(makeRequest, 120000);
 }
 
-window.addEventListener('load', fetchJSON);
-
+fetchJSON();
