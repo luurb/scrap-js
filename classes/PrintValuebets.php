@@ -21,8 +21,7 @@ class PrintValuebets
     public function printResults()
     {
         ?>
-        <form  method="GET" action="filter.php">
-        <table>
+        <table class="games-table">
             <thead>
                 <tr>
                     <th scope="colgroup" class="id-col"><span>ID</span></th>
@@ -38,8 +37,8 @@ class PrintValuebets
                     </th>
                 </tr>
             </thead>
+                
         </table>
-        </form>  
 <?php
     }
 }

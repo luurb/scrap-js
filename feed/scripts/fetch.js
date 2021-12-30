@@ -23,16 +23,14 @@ function fetchJSON() {
     //Functiion print main table with games
     function print() {
         const games = JSON.parse(request.response);
-        let table = document.getElementsByTagName('table');
-        let tbody = document.getElementsByTagName('tbody');
-        let length = tbody.length;
-        
-        //Delete old body of games table
-        while (length) {
-            tbody[0].remove();
-            --length;
-        }
+        let table = document.querySelector('.games-table');
+        let tbody = table.querySelectorAll('tbody');
 
+        //Delete old body of games table
+        for (let i = 0; i < tbody.length; i++)
+            tbody[i].remove();
+
+        //Create new body of games table
         for (let i = 0; i < games.length; i++) {
             tbody = document.createElement('tbody');
             let tr = document.createElement('tr');
@@ -50,11 +48,23 @@ function fetchJSON() {
                 }
                 tr.appendChild(td);
             }
+            /*<td>
+                    <label>                                              
+                    <input type="checkbox" class="add-checkbox">
+                    <span class="add-delete-btn">Add</span>
+                    </label>
+                    <label>
+                    <input type="checkbox" class="del-checkbox">
+                    <span class="add-delete-btn">Delete</span>
+                    </label>
+                </td>*/
             tbody.appendChild(tr);
-            table[0].appendChild(tbody);
+            table.appendChild(tbody);
         }
     }
-    setInterval(makeRequest, 120000);
+    //setInterval(makeRequest, 120000);
+    setInterval(makeRequest, 2000);
+
 }
 
 fetchJSON();
