@@ -5,13 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9369359bc2.js" crossorigin="anonymous"></script>
-    <title>nope</title>
+    <title>Valuebets</title>
     <link rel="stylesheet" href="./styles/header1.css">
-<link rel="stylesheet" href="./styles/main1.css">
-<link rel="stylesheet" href="./styles/aside1.css">
-<link rel="stylesheet" href="./styles/style.css">
-<link rel="stylesheet" href="./styles/footer.css">
 
+<link rel="stylesheet" href="./styles/style.css">
+<link rel="stylesheet" href="./styles/main/main.css">
 
 </head>
 <body>
@@ -19,102 +17,99 @@
     <script src="scripts/stat-filter.js" defer></script>
     <script src="feed/scripts/fetch.js"></script>
 
-    <nav>
-    <div class="logo"><a href="valuebets.php">Value<span class="seclogo">scrap</span></a></div>
-    <input type="checkbox" id="nav-check">
-    <label for="nav-check" class="nav-btn">
-        <i class="fas fa-bars"></i>
-    </label>
-    <div class="nav-wrapper">
-        <div class="left-nav">
-            <ul>
-                <li><a class="active" href="valuebets.php">Valuebets</a></li>
-                <li><a href="bet_history.php">Bet history</a></li>
-                <li><a href="add_bet.php">Add bet</a></li>
-                <li><a href="#"> Tutorials</a></li>    
-            </ul>
-        </div>
-        <input type="checkbox" id="user-check">
-        <label for="user-check" class="user-btn">
+    <nav class="nav">
+        <div class="logo"><a href="valuebets.php">Value<span class="seclogo">scrap</span></a></div>
+        <input type="checkbox" id="nav-check">
+        <label for="nav-check" class="nav-btn">
             <i class="fas fa-bars"></i>
         </label>
-        <div class="right-nav">
-            <ul>
-                <li><a href="#"><i class="fas fa-sign-in-alt"></i>Login</a></li>
-                <li><a href="register.php"#><i class="fas fa-user-plus"></i>Sing up</a></li>
-            </ul>
+        <div class="nav-wrapper">
+            <div class="left-nav">
+                <ul>
+                    <li><a class="active" href="valuebets.php">Valuebets</a></li>
+                    <li><a href="bet_history.php">Bet history</a></li>
+                    <li><a href="add_bet.php">Add bet</a></li>
+                    <li><a href="#"> Tutorials</a></li>    
+                </ul>
+            </div>
+            <input type="checkbox" id="user-check">
+            <label for="user-check" class="user-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="right-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                    <li><a href="register.php"#><i class="fas fa-user-plus"></i>Sing up</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-    <section class="section">
-        <main>
-            <div class="nav-box"></div>
-            <section>
-                <div class="table-wrapper">
-                            <table class="games-table">
-            <thead>
-                <tr>
-                    <th scope="colgroup" class="id-col"><span>ID</span></th>
-                    <th scope="colgroup" class="bookie-col"><span>Bookmaker</span></th>
-                    <th scope="colgroup"><span>Sport</span></th>
-                    <th scope="colgroup"><span>Date and time</span></th>
-                    <th scope="colgroup"><span>Teams</span></th>
-                    <th scope="colgroup"><span>Bet</span></th>
-                    <th scope="colgroup"><span>Odd</span></th>
-                    <th scope="colgroup"><span>Value [%]</span></th>
-                    <th scope="colgroup">
-                        <input type="submit" value="Add/Delete" class="filter_button">
-                    </th>
-                </tr>
-            </thead>
-            <tbody><tr><td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td>
-                <td>
-                    <label>                                              
-                        <input type="checkbox" class="add-checkbox">
-                        <span class="add-delete-btn">Add</span>
-                    </label>
-                    <label>
-                        <input type="checkbox" class="del-checkbox">
-                        <span class="add-delete-btn">Delete</span>
-                    </label>
-                </td></tr></tbody>
-            <tbody><tr><td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td></tr></tbody>
-        </table>
-   
-                </div>
-            </section> 
-        </main>
-        <aside>
+    </nav>
+    <main class="main">
+        <div class="nav-box"></div>
+        <section class="main-table">
+            <div class="table-wrapper">
+                <table class="games-table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup" class="id-col"><span>ID</span></th>
+                            <th scope="colgroup" class="bookie-col"><span>Bookmaker</span></th>
+                            <th scope="colgroup"><span>Sport</span></th>
+                            <th scope="colgroup"><span>Date and time</span></th>
+                            <th scope="colgroup"><span>Teams</span></th>
+                            <th scope="colgroup"><span>Bet</span></th>
+                            <th scope="colgroup"><span>Odd</span></th>
+                            <th scope="colgroup"><span>Value [%]</span></th>
+                            <th scope="colgroup">
+                                <input type="submit" value="Add/Delete" class="filter_button">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody><tr><td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td>
+                        <td>
+                            <label>                                              
+                                <input type="checkbox" class="add-checkbox">
+                                <span class="add-delete-btn">Add</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" class="del-checkbox">
+                                <span class="add-delete-btn">Delete</span>
+                            </label>
+                        </td></tr></tbody>
+                    <tbody><tr><td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td></tr></tbody>
+                </table>
+            </div>
+        </section> 
+        <section class="filter-section">
             <input type="checkbox" id="stat-check">
             <div class="filter-wrapper">
-                <label for="stat-check" class="stat-filter" title="Show stats">
-                    <i class="fas fa-cog"></i>
-                </label>
+            <label for="stat-check" class="stat-filter" title="Show stats">
+            <i class="fas fa-cog"></i>
+            </label>
             </div>
             <div class="aside-option">
-                <span class="wrapper-header">Filters</span>
-                <div class="stats-wrapper">
-                    <div class="stat-box">
-                        <form method="GET" action="click_button.php">
-    <input type="submit" value="Filter" title="Filter bets for corners, fouls, shots, offsides, throws" class="filter-button filter">
-</form> 
-                        </div>
-                </div>
+            <span class="wrapper-header">Filters</span>
+            <div class="stats-wrapper">
+            <div class="stat-box">
+            <form method="GET" action="click_button.php">
+            <input type="submit" value="Filter" title="Filter bets for corners, fouls, shots, offsides, throws" class="filter-button filter">
+            </form> 
             </div>
-        </aside>
-    </section>
-    <footer>
-    <div class="footer-top">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Tutorials</a></li>
-        </ul>
-    </div>
-    <div class="footer-bottom">
-        Copyright &copy 2021 ValueScrap. All Rights Reserved.
-    </div>
-</footer>  
+            </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-top">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Tutorials</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            Copyright &copy 2021 ValueScrap. All Rights Reserved.
+        </div>
+    </footer>  
 </body>
 </html>
