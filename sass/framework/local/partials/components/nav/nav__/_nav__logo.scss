@@ -1,0 +1,11 @@
+@use '../../../../../config/colors';
+
+.nav__logo {
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    a {
+        color: colors.$light-green;
+    }
+}

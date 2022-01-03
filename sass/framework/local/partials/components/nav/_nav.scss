@@ -1,0 +1,42 @@
+@use '../../../fonts';
+@use '../../../../config/colors';
+@use '../../../../config/layers';
+
+
+.nav {
+    font-family: fonts.$poppins;
+    height: 80px;
+    background: colors.$black;
+    align-items: center;
+    padding: 0 50px;
+    position: sticky;
+    top: 0;
+    z-index: layers.$header-index;
+
+    ul {
+        display: flex;
+        
+        i {
+            padding-right: 10px;
+        }
+
+        li {
+            margin: 0 10px;
+        }
+        
+        a {
+            color: colors.$white-f;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 6px 8px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: colors.$black;
+            background: colors.$white-f;
+        }
+    }
+}
