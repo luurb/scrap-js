@@ -1,0 +1,6 @@
+@use '../../../../../../config/colors';
+
+.filters__options {
+    text-align: center;
+    border-top: 2px solid colors.$grey2;
+}

@@ -34,16 +34,16 @@
             </div>
         </section> 
         <section class="filters">
-            <input type="checkbox" id="stat-check">
-            <div class="filter-wrapper">
+            <div class="filters__wrapper none">
                 <label for="stat-check" class="stat-filter" title="Show stats">
-                    <i class="fas fa-cog"></i>
+                    <input type="checkbox" id="stat-check" class="none">    
+                    <i class="fas fa-cog none"></i>
                 </label>
             </div>
-            <div class="aside-option">
-                <span class="wrapper-header">Filters</span>
-                <div class="stats-wrapper">
-                    <div class="stat-box">
+            <div class="filters__options">
+                <span class="filters__header">Filters</span>
+                <div class="filters__stats">
+                    <div class="filters__box">
                         <?php $main->printButton(); ?>
                     </div>
                 </div>

@@ -23,10 +23,10 @@ class Main extends IDbInit
         $button_value = "";
         if ($this->var_button) {
             $button_value = "Unfilter";
-            $class = "filter-button unfilter";
+            $class = "filters__button filters__button--unfilter";
         } else {
             $button_value = "Filter";
-            $class = "filter-button filter";
+            $class = "filters__button filters__button--filter";
         }
         $inscription = <<<ID1
         <form method="GET" action="click_button.php">

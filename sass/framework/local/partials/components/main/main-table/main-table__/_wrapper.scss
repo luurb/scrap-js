@@ -1,7 +1,7 @@
 @use '../../../../../../config/colors';
 
 .main-table__wrapper {
-    height: calc(100% - 120px);
+    height: calc(100% - 60px);
     overflow: auto;
     box-shadow: -5px 10px 10px colors.$grey2;
 }

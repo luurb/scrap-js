@@ -1,5 +1,10 @@
 @forward 'main/main';
 @forward 'main/nav-box';
+
+//main-table block
 @forward 'main/main-table/main-table';
 @forward 'main/main-table/elements';
 
+//filters block
+@forward 'main/filters/filters';
+@forward 'main/filters/elements';

@@ -21,7 +21,7 @@
         color: colors.$tab-links-f;
     }
 
-    tbody:nth-child(even) {
+    tr:nth-child(even) {
         background: colors.$white1;
     }
 

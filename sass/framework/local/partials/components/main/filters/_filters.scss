@@ -1,0 +1,8 @@
+@use '../../../../../config/colors';
+@use '../../../../../config/layers';
+
+.filters {
+    height: calc(100% - 40px);
+    background: colors.$grey1;
+    z-index: layers.$filters-index;
+}

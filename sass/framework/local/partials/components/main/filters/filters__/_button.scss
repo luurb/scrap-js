@@ -1,0 +1,19 @@
+@use '../../../../../fonts';
+@use '../../../../../../config/colors';
+@use '../../../../../mixins';
+
+.filters__button {
+    text-transform: unset;
+    width: 80%;
+    @include mixins.button;
+}
+
+.filters__button--filter {
+    background: colors.$light-green;
+    color: colors.$white-f;
+}
+
+.filters__button--unfilter {
+    background: colors.$white-f;
+    color: colors.$black;
+}

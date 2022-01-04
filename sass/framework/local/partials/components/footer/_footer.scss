@@ -1,0 +1,21 @@
+@use '../../../fonts';
+@use '../../../../config/colors';
+
+.footer {
+    font-family: fonts.$poppins;
+    font-size: 20px;
+    background: colors.$black;
+    color: colors.$grey-f;
+    align-items: center;
+    justify-content: flex-start;
+    border-top: 2px solid colors.$grey-f;
+
+    a {
+        padding: 0 20px;
+        color: colors.$grey-f;
+    }
+
+    a:hover {
+        color: colors.$white-f;
+    }
+}

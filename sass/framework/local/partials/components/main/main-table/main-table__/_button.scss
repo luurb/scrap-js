@@ -3,6 +3,8 @@
 
 
 .main-table__button {
+    width: 100%;
+    text-transform: uppercase;
     @include mixins.button;
 }
 
