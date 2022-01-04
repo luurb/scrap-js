@@ -7,6 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.3s ease;
   font: "Lato", sans-serif;
 }
 
@@ -43,6 +44,18 @@
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
 .nav {
   font-family: "Poppins", sans-serif;
   height: 80px;
@@ -69,7 +82,6 @@
   letter-spacing: 1px;
   padding: 6px 8px;
   border-radius: 5px;
-  transition: all 0.3s ease;
 }
 .nav ul a:hover {
   color: #1b1b1b;
@@ -95,7 +107,6 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  transition: all 0.3s ease;
 }
 
 .nav__left-nav ul {
@@ -114,12 +125,87 @@
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
+.main {
+  font-family: "Lato", sans-serif;
+  background: #f7f7f7;
 }
 
-ul {
-  list-style: none;
+.nav-box {
+  background: #ededed;
+  box-shadow: 0 5px 10px #cdcdcd;
+  padding: 5px;
+}
+
+.main-table {
+  padding: 30px 20px;
+  height: 100vh;
+}
+
+.main-table__wrapper {
+  height: calc(100% - 120px);
+  overflow: auto;
+  box-shadow: -5px 10px 10px #cdcdcd;
+}
+
+.main-table__table {
+  background: #ededed;
+  width: 100%;
+  overflow: auto;
+  text-align: center;
+  border-radius: 10px;
+}
+.main-table__table th, .main-table__table td {
+  padding: 5px 10px;
+}
+.main-table__table th {
+  font-size: 18px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #cdcdcd;
+}
+.main-table__table a {
+  color: #1c1caa;
+}
+.main-table__table tbody:nth-child(even) {
+  background: #f7f7f7;
+}
+.main-table__table a:hover {
+  text-decoration: underline;
+}
+
+.main-table__button {
+  width: 100%;
+  color: #1b1b1b;
+  background: #cdcdcd;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease;
+}
+
+.main-table__button:hover {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.main-table__span {
+  margin: 0 5px;
+  display: inline-block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main-table__checkbox--del:checked ~ span {
+  background: #dd968e;
+}
+
+.main-table__checkbox--add:checked ~ span {
+  background: #5eb987;
 }
 
 /*# sourceMappingURL=styles.css.map */

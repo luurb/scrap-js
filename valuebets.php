@@ -14,28 +14,26 @@
     <script src="feed/scripts/fetch.js"></script>
 
     <?php include('html/header.html'); ?>
-    <section class="section">
-        <main>
-            <div class="nav-box"></div>
-            <section>
-                <div class="table-wrapper">
-                    <?php
-                        function adding_class($class_name)
-                        {
-                            require "./classes/$class_name.php";
-                        }
-                        spl_autoload_register('adding_class');
-                        
-                        if (!isset($_SESSION['filter'])) {
-                            $_SESSION['filter'] = 0;
-                        }
-                        $main = new Main($_SESSION['filter']);
-                        $main->printResults();
-                    ?>   
-                </div>
-            </section> 
-        </main>
-        <aside>
+    <main class="main">
+        <div class="nav-box"></div>
+        <section class="main-table">
+            <div class="main-table__wrapper">
+                <?php
+                    function adding_class($class_name)
+                    {
+                        require "./classes/$class_name.php";
+                    }
+                    spl_autoload_register('adding_class');
+                    
+                    if (!isset($_SESSION['filter'])) {
+                        $_SESSION['filter'] = 0;
+                    }
+                    $main = new Main($_SESSION['filter']);
+                    $main->printResults();
+                ?>   
+            </div>
+        </section> 
+        <section class="filters">
             <input type="checkbox" id="stat-check">
             <div class="filter-wrapper">
                 <label for="stat-check" class="stat-filter" title="Show stats">
@@ -50,8 +48,8 @@
                     </div>
                 </div>
             </div>
-        </aside>
-    </section>
+        </section>
+    </main>
     <?php include('html/footer.html'); ?>
 </body>
 </html>

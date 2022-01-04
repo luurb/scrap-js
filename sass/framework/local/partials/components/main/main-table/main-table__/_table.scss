@@ -1,0 +1,31 @@
+@use '../../../../../../config/colors';
+
+.main-table__table {
+    background: colors.$grey1;
+    width: 100%;
+    overflow: auto;
+    text-align: center;
+    border-radius: 10px;
+
+    th, td {
+        padding: 5px 10px;
+    }
+
+    th {
+        font-size: 18px;
+        text-transform: uppercase;
+        border-bottom: 1px solid colors.$grey2;
+    }
+
+    a {
+        color: colors.$tab-links-f;
+    }
+
+    tbody:nth-child(even) {
+        background: colors.$white1;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+}

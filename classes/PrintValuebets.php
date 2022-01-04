@@ -21,11 +21,11 @@ class PrintValuebets
     public function printResults()
     {
         ?>
-        <table class="games-table">
+        <table class="main-table__table">
             <thead>
                 <tr>
-                    <th scope="colgroup" class="id-col"><span>ID</span></th>
-                    <th scope="colgroup" class="bookie-col"><span>Bookmaker</span></th>
+                    <th scope="colgroup"><span>ID</span></th>
+                    <th scope="colgroup"><span>Bookmaker</span></th>
                     <th scope="colgroup"><span>Sport</span></th>
                     <th scope="colgroup"><span>Date and time</span></th>
                     <th scope="colgroup"><span>Teams</span></th>
@@ -33,11 +33,12 @@ class PrintValuebets
                     <th scope="colgroup"><span>Odd</span></th>
                     <th scope="colgroup"><span>Value [%]</span></th>
                     <th scope="colgroup">
-                        <input type="submit" value="Add/Delete" class="filter_button">
+                        <input type="submit" value="Add/Delete" class="main-table__button">
                     </th>
                 </tr>
             </thead>
-                
+            <tbody>
+            </tbody>  
         </table>
 <?php
     }

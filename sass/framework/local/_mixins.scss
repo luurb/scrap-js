@@ -1,5 +1,21 @@
+@use '../config/colors' as c;
+
 @mixin fa-btn {
-    color: #fff;
+    color: c.$white-f;
     font-size: 24px;
     cursor: pointer;
+}
+
+@mixin button {
+    width: 100%;
+    color: c.$black;
+    background: c.$grey2;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease;
 }

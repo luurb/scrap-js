@@ -43,12 +43,12 @@
     <main class="main">
         <div class="nav-box"></div>
         <section class="main-table">
-            <div class="table-wrapper">
-                <table class="games-table">
+            <div class="main-table__wrapper">
+                <table class="main-table__table">
                     <thead>
                         <tr>
-                            <th scope="colgroup" class="id-col"><span>ID</span></th>
-                            <th scope="colgroup" class="bookie-col"><span>Bookmaker</span></th>
+                            <th scope="colgroup"><span>ID</span></th>
+                            <th scope="colgroup"><span>Bookmaker</span></th>
                             <th scope="colgroup"><span>Sport</span></th>
                             <th scope="colgroup"><span>Date and time</span></th>
                             <th scope="colgroup"><span>Teams</span></th>
@@ -56,26 +56,29 @@
                             <th scope="colgroup"><span>Odd</span></th>
                             <th scope="colgroup"><span>Value [%]</span></th>
                             <th scope="colgroup">
-                                <input type="submit" value="Add/Delete" class="filter_button">
+                                <input type="submit" value="Add/Delete" class="main-table__button">
                             </th>
                         </tr>
                     </thead>
-                    <tbody><tr><td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td>
-                        <td>
-                            <label>                                              
-                                <input type="checkbox" class="add-checkbox">
-                                <span class="add-delete-btn">Add</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" class="del-checkbox">
-                                <span class="add-delete-btn">Delete</span>
-                            </label>
-                        </td></tr></tbody>
-                    <tbody><tr><td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td></tr></tbody>
+                    <tbody>
+                        <tr>
+                            <td>1</td><td>Sbo​bet</td><td>Football</td><td>30/1221:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Porto – BenficaLIGA PORTUGAL</a></td><td>Over 1 1st period</td><td>1.76</td><td>0.86</td>
+                            <td>
+                                <label>
+                                    <input type="checkbox" class="main-table__checkbox--add none">                                           
+                                    <span class="main-table__span">Add</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="main-table__checkbox--del none">
+                                    <span class="main-table__span">Delete</span>
+                                </label>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </section> 
-        <section class="filter-section">
+        <section class="filters">
             <input type="checkbox" id="stat-check">
             <div class="filter-wrapper">
             <label for="stat-check" class="stat-filter" title="Show stats">

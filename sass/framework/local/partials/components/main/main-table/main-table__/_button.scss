@@ -1,0 +1,12 @@
+@use '../../../../../mixins';
+@use '../../../../../../config/colors';
+
+
+.main-table__button {
+    @include mixins.button;
+}
+
+.main-table__button:hover {
+    background: colors.$black;
+    color: colors.$white-f;
+}

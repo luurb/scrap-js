@@ -23,19 +23,20 @@ function fetchJSON() {
     //Functiion print main table with games
     function print() {
         const games = JSON.parse(request.response);
-        let table = document.querySelector('.games-table');
-        let tbody = table.querySelectorAll('tbody');
+        let table = document.querySelector('.main-table__table');
+        let tbody = table.querySelector('tbody');
+        let tr = tbody.querySelectorAll('tr');
 
         //Delete old body of games table
-        for (let i = 0; i < tbody.length; i++)
-            tbody[i].remove();
+        for (let i = 0; i < tr.length; i++)
+            tr[i].remove();
 
         //Create new body of games table
         for (let i = 0; i < games.length; i++) {
-            tbody = document.createElement('tbody');
-            let tr = document.createElement('tr');
+            tr = document.createElement('tr');
+            let td;
             for (let j = 0; j < games[i].length; j++) {
-                let td = document.createElement('td');
+                td = document.createElement('td');
                 //Set link for teams
                 if (j === 4) {
                     let a = document.createElement('a');
@@ -48,18 +49,18 @@ function fetchJSON() {
                 }
                 tr.appendChild(td);
             }
-            /*<td>
-                    <label>                                              
-                    <input type="checkbox" class="add-checkbox">
-                    <span class="add-delete-btn">Add</span>
-                    </label>
-                    <label>
-                    <input type="checkbox" class="del-checkbox">
-                    <span class="add-delete-btn">Delete</span>
-                    </label>
-                </td>*/
+            td = document.createElement('td');
+            td.innerHTML = 
+            `<label>
+                <input type="checkbox" class="main-table__checkbox--add none">                                           
+                <span class="main-table__span">Add</span>
+            </label>
+            <label>
+                <input type="checkbox" class="main-table__checkbox--del none">
+                <span class="main-table__span">Delete</span>
+            </label>`;
+            tr.appendChild(td);
             tbody.appendChild(tr);
-            table.appendChild(tbody);
         }
     }
     //setInterval(makeRequest, 120000);

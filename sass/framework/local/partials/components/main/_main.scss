@@ -1,0 +1,7 @@
+@use '../../../fonts';
+@use '../../../../config/colors';
+
+.main {
+    font-family: fonts.$lato;
+    background: colors.$white1;
+}

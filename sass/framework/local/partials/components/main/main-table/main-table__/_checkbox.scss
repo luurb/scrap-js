@@ -1,0 +1,9 @@
+@use '../../../../../../config/colors';
+
+.main-table__checkbox--del:checked ~ span {
+    background: colors.$pink;
+}
+
+.main-table__checkbox--add:checked ~ span {
+    background: colors.$light-green;
+}
