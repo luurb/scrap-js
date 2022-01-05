@@ -1,0 +1,13 @@
+@use '../../../../../mixins';
+
+.main-table__select {
+    width: 100%;
+    text-align: center;
+    @include mixins.button;
+    
+}
+
+.main-table__select:hover {
+    @include mixins.button-hover;
+}
+

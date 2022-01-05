@@ -1,32 +1,7 @@
 
-main section table select,
-main section table tbody button{
-    width: 100%;
-    color: #1b1b1b;
-    background: #cdcdcd;
-    font-size: 16px;
-    padding: 8px;
-    border-radius: 10px;
-    cursor: pointer;
-    outline: 0;
-    border: 0;
-    transition: all 0.3s ease;
-}
 main section table tbody td i{
     font-style: normal;
 }
-
-main section table tbody button:hover{
-    background: #1b1b1b;
-    color: #fff;
-}
-main section table input:hover,
-main section table input[type="text"]:focus,
-main section table select:hover,
-main section table select:focus{
-    background: #fff;
-}
-
 main section table .ball-img{
     width: 20px;
 }
@@ -42,9 +17,6 @@ main section table .bet-col{
 }
 main section table .odd-col{
     width: 5%;
-}
-main section table .modify-button{
-    background: #fff;
 }
 
 @media (max-width: 1700px){

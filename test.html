@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/9369359bc2.js" crossorigin="anonymous"></script>
-    <title>Bet history</title>
+    <title>Bet modify</title>
     <link rel="stylesheet" href="styles.css">
+
+
+
 </head>
 <body>
-    <script src="scripts/add-icons.js"></script>
-    <script src="scripts/stat-filter.js" defer></script>
     <nav class="nav flex">
         <div class="nav__logo"><a href="valuebets.php">Value<span class="nav__seclogo">scrap</span></a></div>
         <input type="checkbox" id="nav-check" class="none">
@@ -38,217 +40,72 @@
             </div>
         </div>
     </nav>
-    <main class="main">
-        <div class="nav-box"></div>
-        <section class="main-table">
-            <div class="main-table__wrapper">
-                <table class="main-table__table">
-                    <thead>
-                        <tr>
-                            <th scope="colgroup" class="id-col"><span>ID</span></th>
-                            <th scope="colgroup" class="bookie-col"><span>Bookmaker</span></th>
-                            <th scope="colgroup"><span>Sport</span></th>
-                            <th scope="colgroup"><span>Date and time</span></th>
-                            <th scope="colgroup"><span>Teams</span></th>
-                            <th scope="colgroup"><span>Bet</span></th>
-                            <th scope="colgroup"><span>Odd</span></th>
-                            <th scope="colgroup"><span>Value [%]</span></th>
-                            <th scope="colgroup"><span>Stake</span></th>
-                            <th scope="colgroup" class="result-col">Result</th>
-                            <th scope="colgroup"><span>Return</span></th>
-                            <th scope="colgroup">
-                                <input type="submit" value="Delete" class="main-table__button">
-                            </th>
-                            <th scope="colgroup"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="main-table__tr main-table__tr--win">
-                            <td class>1</td>
-                            <td class>Pin​nacle</td>
-                            <td class><span>Basketball</span></td>
-                            <td class>2022-01-04 04:40:00</td>
-                            <td class>Los Angeles Clippers - Minnesota Timberwolves</td>
-                            <td>2</td>
-                            <td class>2.27</td>
-                            <td>8</td> 
-                            <td>10</td> 
-                            <td class>1</td> 
-                            <td>12.7</td> 
-                            <td>
-                                <label>
-                                    <input type="checkbox" value="2607" name="del[]" class="main-table__checkbox--del none">
-                                    <span class="main-table__span">Delete</span>
-                                </label>
-                            </td>
-                            <td>
-                                <form method="GET" action="modify.php">
-                                    <button type="submit" value="2607" name="submit" class="main-table__button">Modify</button>
-                                </form>
-                            </td>
-                        </tr> 
-                        <tr class="main-table__tr main-table__tr--win">
-                            <td class>1</td>
-                            <td class>Pin​nacle</td>
-                            <td class><span>Basketball</span></td>
-                            <td class>2022-01-04 04:40:00</td>
-                            <td class>Los Angeles Clippers - Minnesota Timberwolves</td>
-                            <td>2</td>
-                            <td class>2.27</td>
-                            <td>8</td> 
-                            <td>10</td> 
-                            <td class>1</td> 
-                            <td>12.7</td> 
-                            <td>
-                                <label>
-                                    <input type="checkbox" value="2607" name="del[]" class="main-table__checkbox--del none">
-                                    <span class="main-table__span">Delete</span>
-                                </label>
-                            </td>
-                            <td>
-                                <form method="GET" action="modify.php">
-                                    <button type="submit" value="2607" name="submit" class="main-table__button">Modify</button>
-                                </form>
-                            </td>
-                        </tr>    
-                        <tr class="main-table__tr main-table__tr--lose">
-                            <td class>1</td>
-                            <td class>Pin​nacle</td>
-                            <td class><span>Basketball</span></td>
-                            <td class>2022-01-04 04:40:00</td>
-                            <td class>Los Angeles Clippers - Minnesota Timberwolves</td>
-                            <td>2</td>
-                            <td class>2.27</td>
-                            <td>8</td> 
-                            <td>10</td> 
-                            <td class>1</td> 
-                            <td>12.7</td> 
-                            <td>
-                                <label>
-                                    <input type="checkbox" value="2607" name="del[]" class="main-table__checkbox--del none">
-                                    <span class="main-table__span">Delete</span>
-                                </label>
-                            </td>
-                            <td>
-                                <form method="GET" action="modify.php">
-                                    <button type="submit" value="2607" name="submit" class="main-table__button">Modify</button>
-                                </form>
-                            </td>
-                        </tr>   
-                        <tr class="main-table__tr main-table__tr--win">
-                            <td class>1</td>
-                            <td class>Pin​nacle</td>
-                            <td class><span>Basketball</span></td>
-                            <td class>2022-01-04 04:40:00</td>
-                            <td class>Los Angeles Clippers - Minnesota Timberwolves</td>
-                            <td>2</td>
-                            <td class>2.27</td>
-                            <td>8</td> 
-                            <td>10</td> 
-                            <td class>1</td> 
-                            <td>12.7</td> 
-                            <td>
-                                <label>
-                                    <input type="checkbox" value="2607" name="del[]" class="main-table__checkbox--del none">
-                                    <span class="main-table__span">Delete</span>
-                                </label>
-                            </td>
-                            <td>
-                                <form method="GET" action="modify.php">
-                                    <button type="submit" value="2607" name="submit" class="main-table__button">Modify</button>
-                                </form>
-                            </td>
-                        </tr>    
-                        <tr class="main-table__tr main-table__tr--lose">
-                            <td class>1</td>
-                            <td class>Pin​nacle</td>
-                            <td class><span>Basketball</span></td>
-                            <td class>2022-01-04 04:40:00</td>
-                            <td class>Los Angeles Clippers - Minnesota Timberwolves</td>
-                            <td>2</td>
-                            <td class>2.27</td>
-                            <td>8</td> 
-                            <td>10</td> 
-                            <td class>1</td> 
-                            <td>12.7</td> 
-                            <td>
-                                <label>
-                                    <input type="checkbox" value="2607" name="del[]" class="main-table__checkbox--del none">
-                                    <span class="main-table__span">Delete</span>
-                                </label>
-                            </td>
-                            <td>
-                                <form method="GET" action="modify.php">
-                                    <button type="submit" value="2607" name="submit" class="main-table__button">Modify</button>
-                                </form>
-                            </td>
-                        </tr>  
-                    </tbody>                                            
-                </table>
-            </div>
-        </section>
-        <section class="filters"> 
-            <div class="filters__wrapper none">
-                <label for="stat-check" class="stat-filter" title="Show stats">
-                    <input type="checkbox" id="stat-check" class="none">
-                    <i class="fas fa-cog none"></i>
-                </label>
-            </div>
-            <div class="filters__options">
-                <span class="filters__header">All time stats</span>
-                <div class="filters__stats">
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Return</span>
-                        <span class="filters__value">5739.24</span>
-                    </div>
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Yield</span>
-                        <span class="filters__value">7.47%</span>
-                    </div>
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Avg value</span>
-                        <span class="filters__value">5.59%</span>
-                    </div>
+        <main class="main">
+            <div class="nav-box"></div>
+            <section class="main-table">
+                <div class="main-table__wrapper">
+                                        <form  method="GET" action="db_modify.php">
+                        <table class="main-table__table">
+                            <thead>
+                                <tr>
+                                    <th scope="colgroup" class="id-col">Id</th>
+                                    <th scope="colgroup">Bookmaker</th>
+                                    <th scope="colgroup">Sport</th>
+                                    <th scope="colgroup">Date and time</th>
+                                    <th scope="colgroup">Teams</th>
+                                    <th scope="colgroup">Bet</th>
+                                    <th scope="colgroup">Odd</th>
+                                    <th scope="colgroup">Value [%]</th>
+                                    <th scope="colgroup">Stake</th>
+                                    <th scope="colgroup">Result</th>
+                                    <th scope="colgroup">Return</th>
+                                    <th scope="colgroup"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="id-col">
+                                        <input type="hidden" value="2610" name="bet_id">2610                                    </td>
+                                    <td>Pin​nacle</td>
+                                    <td>Basketball</td>
+                                    <td>2022-01-05 02:10:00</td>
+                                    <td class="teams-col">New Orleans Pelicans - Phoenix Suns</td>
+                                    <td><input type="text" name="bet" value="1" class="main-table__input"></td>                            
+                                    <td><input type="text" name="odd" value="3.48" class="main-table__input"></td>
+                                    <td><input type="text" name="value" value="8" class="main-table__input"></td>      
+                                    <td><input type="text" name="stake" value="10" class="main-table__input"></td>      
+                                    <td>
+                                        <select name="result" class="main-table__select">
+                                            <option value="-">-</option>
+                                            <option value="1">1</option>
+                                            <option value="0">0</option>
+                                        </select>   
+                                    </td>      
+                                    <td>-10</td>      
+                                    <td>
+                                        <input type="submit" value="Modify" name="submit" class="main-table__button">
+                                    </td>
+                                </tr>
+                            </tbody> 
+                        </table>
+                    </form>
+                           
                 </div>
-                <span class="filters__header">Set time stats</span>
-                <div class="filters__stats">
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Return</span>
-                        <span class="filters__value">5739.24</span>
-                    </div>
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Yield</span>
-                        <span class="filters__value">7.47%</span>
-                    </div>
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Avg value</span>
-                        <span class="filters__value">7.47%</span>
-                    </div>
-                    <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Time range </span>
-                        <form method="GET" action="bet_history.php">
-                            <input type="date" name="first_date" class="filters__input">
-                            <span class="ftilers__header filters__header--stat">/</span>
-                            <input type="date" name="second_date" class="filters__input">
-                            <input type="submit" name="submit" class="filters__button filters__submit">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__top flex">
-            <ul class="flex">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Tutorials</a></li>
-            </ul>
-        </div>
-        <div class="footer__bottom">
-            Copyright &copy 2021 ValueScrap. All Rights Reserved.
-        </div>
-    </footer>   
-</body>
+            </section>
+            <section class="filters">
+            </section>
+        </main>
+   <footer class="footer">
+    <div class="footer__top flex">
+        <ul class="flex">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Tutorials</a></li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+        Copyright &copy 2021 ValueScrap. All Rights Reserved.
+    </div>
+</footer>  </body>
 </html>

@@ -1,0 +1,17 @@
+//Bet add page
+
+.main-table__add-table {
+    table-layout: fixed;
+
+    th:nth-child(-n+4) {
+        width: 10%;
+    }
+    
+    th:nth-child(5) {
+        width: 25%;
+    }
+
+    th:nth-child(6) {
+        width: 10%;
+    }
+}

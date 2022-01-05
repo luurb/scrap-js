@@ -1,0 +1,13 @@
+@use '../../../../../mixins';
+@use '../../../../../../config/colors';
+
+.main-table__input {
+    width: 100%;
+    text-align: center;
+    @include mixins.button(colors.$black, colors.$white-f);
+}
+
+.main-table__input:hover,
+.main-table__input:focus {
+    background: colors.$grey2;
+}

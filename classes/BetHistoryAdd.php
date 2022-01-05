@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 //Class for adding custom games to bet history table
 class BetHistoryAdd extends IDbInit
 {

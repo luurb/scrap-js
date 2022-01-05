@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 //Class for modifing bet_history table 
 class BetHistoryModify extends IDbInit
 {

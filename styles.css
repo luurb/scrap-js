@@ -7,12 +7,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  transition: all 0.3s ease;
   font: "Lato", sans-serif;
-}
-
-.fas {
-  transition: unset;
 }
 
 .main {
@@ -50,6 +45,7 @@
 
 a {
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 ul {
@@ -58,6 +54,13 @@ ul {
 
 table {
   border-collapse: collapse;
+}
+
+button, select, input {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease;
 }
 
 .nav {
@@ -152,6 +155,19 @@ table {
   box-shadow: -5px 10px 10px #cdcdcd;
 }
 
+.main-table__add-table {
+  table-layout: fixed;
+}
+.main-table__add-table th:nth-child(-n+4) {
+  width: 10%;
+}
+.main-table__add-table th:nth-child(5) {
+  width: 25%;
+}
+.main-table__add-table th:nth-child(6) {
+  width: 10%;
+}
+
 .main-table__table {
   background: #ededed;
   width: 100%;
@@ -185,9 +201,6 @@ table {
   font-size: 16px;
   padding: 8px;
   border-radius: 10px;
-  cursor: pointer;
-  outline: 0;
-  border: 0;
 }
 
 .main-table__button:hover {
@@ -202,6 +215,7 @@ table {
   background: #fff;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .main-table__checkbox--del:checked ~ span {
@@ -210,6 +224,36 @@ table {
 
 .main-table__checkbox--add:checked ~ span {
   background: #5eb987;
+}
+
+.main-table__select {
+  width: 100%;
+  text-align: center;
+  color: #1b1b1b;
+  background: #cdcdcd;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.main-table__select:hover {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.main-table__input {
+  width: 100%;
+  text-align: center;
+  color: #1b1b1b;
+  background: #fff;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.main-table__input:hover,
+.main-table__input:focus {
+  background: #cdcdcd;
 }
 
 .main-table__tr--win td:nth-child(5),
@@ -268,9 +312,6 @@ table {
   font-size: 16px;
   padding: 8px;
   border-radius: 10px;
-  cursor: pointer;
-  outline: 0;
-  border: 0;
 }
 
 .filters__button--filter {
@@ -294,9 +335,6 @@ table {
   font-size: 16px;
   padding: 8px;
   border-radius: 10px;
-  cursor: pointer;
-  outline: 0;
-  border: 0;
 }
 
 .filters__value {
