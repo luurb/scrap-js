@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 //Abstract class with data to login to database
 abstract class IDbInit
 {
@@ -10,7 +12,7 @@ abstract class IDbInit
 
     public function dbConnect()
     {
-        $db_obj = new mysqli($this->addr, $this->login, $this->password, $this->db_name);
+        $db_obj = new \mysqli($this->addr, $this->login, $this->password, $this->db_name);
         if (!$db_obj->connect_errno) {
             return $db_obj;
         } else {

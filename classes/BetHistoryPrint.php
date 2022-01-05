@@ -1,12 +1,14 @@
 <?php
 
+namespace classes;
+
 //Class with methods for operation on bet_history database.
 class BetHistoryPrint extends IDbInit
 {
     //Function print history bets which user add to database
     public function printResults(){ ?>
         <form  method="GET" action="delete.php">
-            <table class="v_table">
+            <table class="main-table__table">
                 <thead>
                     <tr>
                         <th scope="colgroup" class="id-col"><span>ID</span></th>
@@ -21,22 +23,22 @@ class BetHistoryPrint extends IDbInit
                         <th scope="colgroup" class="result-col">Result</th>
                         <th scope="colgroup"><span>Return</span></th>
                         <th scope="colgroup">
-                            <input type="submit" value="Delete" class="filter_button">
+                            <input type="submit" value="Delete" class="main-table__button">
                         </th>
                         <th scope="colgroup"></th>
                     </tr>
                 </thead>
+                <tbody>
                 <?php
                 $db_obj = $this->dbConnect();
                 $query = "SELECT bet_id, bookiename, sportname, `datetime`, teams, bet, odd, `value`, stake, `result`, `return`";
-                $query .= " FROM bet_history INNER JOIN bookie ON bet_history.bookmakerid = bookie.id INNER JOIN sport ON bet_history.sportid = sport.id ORDER BY bet_id DESC LIMIT 100";
+                $query .= " FROM bet_history INNER JOIN bookie ON bet_history.bookmakerid = bookie.id INNER JOIN sport ON bet_history.sportid = sport.id ORDER BY bet_id DESC LIMIT 5";
                 if ($result = $db_obj->query($query)): $iter = 0;
                     while($row = $result->fetch_array()): 
                     ++$iter;
                     $class = $this->getClass($row['result']);
                     ?>
-                <tbody class="<?=$class?>">
-                    <tr>
+                    <tr class="<?=$class?>">
                         <td class="id-col"><?=$iter?></td>
                         <td class="bookie-col"><?=$row['bookiename']?></td>
                         <td class="sport-col"><span><?=$row['sportname']?></span></td>
@@ -50,22 +52,22 @@ class BetHistoryPrint extends IDbInit
                         <td><?=$row['return']?></td> 
                         <td>
                             <label>
-                                <input type="checkbox" value="<?=$row['bet_id']?>" name="del[]" class="del-checkbox">
-                                <span class="add-delete-btn">Delete</span>
+                                <input type="checkbox" value="<?=$row['bet_id']?>" name="del[]" class="main-table__checkbox--del none">
+                                <span class="main-table__span">Delete</span>
                             </label>
                         </td>
                         </form>
                         <td>
                             <form method="GET" action="modify.php">
-                                <button type="submit" value="<?=$row['bet_id']?>" name="submit" class="modify_button">Modify</button>
+                                <button type="submit" value="<?=$row['bet_id']?>" name="submit" class="main-table__button">Modify</button>
                             </form>
                         </td>
                     </tr>
-                </tbody> 
                 <?php endwhile;
                 endif;
                 $db_obj->close();
-                ?>         
+                ?>
+                </tbody>         
             </table>
             <?php
     }
@@ -75,10 +77,10 @@ class BetHistoryPrint extends IDbInit
     {
         switch($result){
             case 0:
-                $class = "td-lose";
+                $class = "main-table__tr main-table__tr--lose";
                 break;
             case 1:
-                $class = "td-win";
+                $class = "main-table__tr main-table__tr--win";
                 break;
             case '-':
                 $class = "td-unknown";

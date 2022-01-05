@@ -1,5 +1,7 @@
 <?php
 
+namespace feed\classes;
+
 //Class for init scraping from URL address 
 class ScraperInit
 {
@@ -18,7 +20,7 @@ class ScraperInit
         $response = curl_exec($ch);
 
         //Create new DOMDocument
-        $html = new DOMDocument();
+        $html = new \DOMDocument();
         @ $html->loadHTML($response);
                     
         //Return DOMNodeList

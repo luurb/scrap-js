@@ -1,0 +1,8 @@
+//History page 
+@use '../../../../../mixins';
+@use '../../../../../../config/colors';
+
+.filters__input {
+    width: 100%;
+    @include mixins.button(colors.$black, colors.$white-f);
+}

@@ -1,10 +1,9 @@
-@use '../../../../../fonts';
-@use '../../../../../../config/colors';
 @use '../../../../../mixins';
+@use '../../../../../../config/colors';
 
 .filters__button {
-    text-transform: unset;
     width: 80%;
+    text-transform: unset;
     @include mixins.button;
 }
 

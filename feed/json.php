@@ -1,9 +1,6 @@
 <?php
 
-function adding_class($class_name) {
-    require "./classes/$class_name.php";
-}
-spl_autoload_register('adding_class');
+require_once '../autoload.php';
 
-$json = new CreateJSON();
+$json = new feed\classes\CreateJSON();
 echo $json->returnJSON();

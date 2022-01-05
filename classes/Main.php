@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 //Class for printing correct page (correct button and values).
 class Main extends IDbInit
 {
@@ -13,7 +15,7 @@ class Main extends IDbInit
     //Print page with filtered or unfitered data.
     public function printResults()
     {
-      $results = new PrintValuebets();
+      $results = new \classes\PrintValuebets();
       $results->printResults();
     }
 

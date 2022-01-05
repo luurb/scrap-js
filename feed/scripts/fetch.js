@@ -63,8 +63,8 @@ function fetchJSON() {
             tbody.appendChild(tr);
         }
     }
-    //setInterval(makeRequest, 120000);
-    setInterval(makeRequest, 2000);
+    setInterval(makeRequest, 120000);
+    //setInterval(makeRequest, 2000);
 
 }
 

@@ -1,0 +1,17 @@
+@use '../../../../../../config/colors';
+
+.main-table__tr--win {
+    td:nth-child(5),
+    td:nth-child(11) {
+        color: colors.$green;
+        font-weight: 600;
+    }
+}
+
+.main-table__tr--lose {
+    td:nth-child(5),
+    td:nth-child(11) {
+        color: colors.$red;
+        font-weight: 600;
+    }
+}

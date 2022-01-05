@@ -6,13 +6,18 @@
     cursor: pointer;
 }
 
-@mixin button {
-    color: c.$black;
-    background: c.$grey2;
+@mixin button ($color: c.$black, $background: c.$grey2) {
+    color: $color;
+    background: $background;
     font-size: 16px;
     padding: 8px;
     border-radius: 10px;
     cursor: pointer;
     outline: 0;
     border: 0;
+}
+
+@mixin button-hover {
+    background: c.$black;
+    color: c.$white-f;
 }

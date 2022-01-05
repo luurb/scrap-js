@@ -1,0 +1,11 @@
+//History page 
+@use '../../../../../../config/colors';
+
+.filters__value {
+    display: block;
+    padding: 5px;
+    font-size: 18px;
+    background: colors.$black;
+    color: colors.$white-f;
+    border-radius: 10px;
+}

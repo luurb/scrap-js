@@ -3,4 +3,10 @@
 @forward 'filters__/header';
 @forward 'filters__/stats';
 @forward 'filters__/button';
+
+//History page filters
 @forward 'filters__/box';
+@forward 'filters__/input';
+@forward 'filters__/value';
+@forward 'filters__/submit';
+

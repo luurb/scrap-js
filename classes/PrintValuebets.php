@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 class PrintValuebets
 {
     //Filter bets with key words.

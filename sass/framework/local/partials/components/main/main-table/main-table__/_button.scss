@@ -9,6 +9,5 @@
 }
 
 .main-table__button:hover {
-    background: colors.$black;
-    color: colors.$white-f;
+    @include mixins.button-hover;
 }

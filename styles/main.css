@@ -47,17 +47,6 @@ main section table .modify-button{
     background: #fff;
 }
 
-.td-win td:nth-child(11),
-.td-win td:nth-child(5){
-    color: #2d9129; 
-    font-weight: 600;
-}
-
-.td-lose td:nth-child(11),
-.td-lose td:nth-child(5){
-    color: #ae1b16; 
-    font-weight: 600;
-}
 @media (max-width: 1700px){
     main section .add-table{
         display: flex;

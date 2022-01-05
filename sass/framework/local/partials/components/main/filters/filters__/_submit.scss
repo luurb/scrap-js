@@ -1,0 +1,10 @@
+//History page 
+@use '../../../../../mixins';
+
+.filters__submit {
+    margin-top: 20px;
+}
+
+.filters__submit:hover {
+    @include mixins.button-hover;
+}
