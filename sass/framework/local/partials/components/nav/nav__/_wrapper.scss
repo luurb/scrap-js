@@ -1,0 +1,39 @@
+@use '../../../../../config/breakpoints';
+@use '../../../../../config/colors';
+
+.nav__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: breakpoints.$tablets) {
+    .nav__wrapper {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        height: 100vh;
+        background: colors.$black1;
+        text-align: center;
+        left: -100%;
+        transition: all 0.3s ease;
+
+        ul {
+            display: block;
+            padding: 20px 0;
+        }
+
+        li {
+            padding: 10px 0;
+        }
+    }
+    #nav-check:checked ~ .nav__wrapper {
+        left: 0;
+    }
+
+    #nav-check:checked ~ .nav__label i:before {
+        content: "\f00d";
+    }
+}

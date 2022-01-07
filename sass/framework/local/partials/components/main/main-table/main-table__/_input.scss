@@ -1,6 +1,7 @@
 @use '../../../../../mixins';
 @use '../../../../../../config/colors';
 
+
 .main-table__input {
     width: 100%;
     text-align: center;
@@ -11,3 +12,4 @@
 .main-table__input:focus {
     background: colors.$grey2;
 }
+

@@ -1,6 +1,7 @@
 @use '../../../../../config/colors';
+@use '../../../../fonts';
 
 .nav__seclogo {
     color: colors.$white-f;
-    font-size: 28px;
+    font-size: fonts.$large;
 }

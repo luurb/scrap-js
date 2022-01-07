@@ -1,7 +1,7 @@
 @use '../../../../../../config/colors';
 
 .main-table__span {
-    margin: 0 5px;
+    margin-bottom: 5px;
     display: inline-block;
     padding: 10px;
     background: #fff;
@@ -9,4 +9,5 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 

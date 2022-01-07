@@ -1,0 +1,11 @@
+@use '../../../../../config/breakpoints';
+
+.nav__left-nav {
+    padding-left: 100px;
+}
+
+@media (max-width: breakpoints.$tablets) {
+    .nav__left-nav {
+      padding-left: 0;
+    }
+}

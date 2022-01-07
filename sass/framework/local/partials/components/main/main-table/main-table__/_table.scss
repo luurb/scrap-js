@@ -1,4 +1,8 @@
 @use '../../../../../../config/colors';
+@use '../../../../../../config/breakpoints';
+@use '../../../../../../local/fonts';
+
+
 
 .main-table__table {
     background: colors.$grey1;
@@ -6,13 +10,14 @@
     overflow: auto;
     text-align: center;
     border-radius: 10px;
+    font-size: fonts.$small;
 
     th, td {
-        padding: 5px 10px;
+        padding: 5px;
     }
 
     th {
-        font-size: 18px;
+        font-size: fonts.$small;
         text-transform: uppercase;
         border-bottom: 1px solid colors.$grey2;
     }
@@ -29,3 +34,4 @@
         text-decoration: underline;
     }
 }
+

@@ -8,66 +8,11 @@ main section table .ball-img{
 main section table td img{
     display: none;
 }
-main section table .teams-col{
-    width: 30%;
-}
-main section table .sport-col,
-main section table .bet-col{
-    width: 10%;
-}
-main section table .odd-col{
-    width: 5%;
-}
 
-@media (max-width: 1700px){
-    main section .add-table{
-        display: flex;
-    }
-    main section .add-table tbody,
-    main section .add-table thead{
-        display: flex;
-        width: 100%;
-    }
-    main section .add-table tr{
-        display: block;
-        width: 100%;
-    }
-    main section .add-table td,
-    main section .add-table th{
-        display: block;
-        width: 100%;
-        height: 60px;
-        padding: 15px;
-        font-size: 20px;
-    }
-    main section .add-table input,
-    main section .add-table select{
-        padding: 10px;
-        font-size: 18px;
-        text-align: center;
-    }
-    main section table .modify-button{
-        border: 1px solid #1b1b1b;
-    }
-    main section table .id-col{
-        display: none;
-    }
-}
 @media (max-width: 1430px){
-    main .nav-box .stat-narrow{
-        display: block;
-    }
-    main .nav-box{
-        position: sticky;
-        top: 80px;
-    }
     main section table th,
     main section table td{
         padding: 5px;
-    }
-    main section table .id-col,
-    main section table .result-col{
-        display: none;
     }
     main section table th,
     main section table th input{

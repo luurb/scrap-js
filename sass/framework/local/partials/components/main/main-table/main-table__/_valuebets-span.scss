@@ -1,0 +1,8 @@
+@use '../../../../../../config/breakpoints';
+
+@media (max-width: breakpoints.$desktop-mid) {
+    .main-table__valuebets-span {
+        width: 70%;
+        padding: 5px;
+    }
+}

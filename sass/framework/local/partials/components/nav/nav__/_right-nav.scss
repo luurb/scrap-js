@@ -1,0 +1,28 @@
+@use '../../../../../config/breakpoints';
+@use '../../../../../config/colors';
+
+@media (max-width: breakpoints.$desktop-small) and (min-width: breakpoints.$tablets) {
+    .nav__right-nav {
+        position: fixed;
+        left: 0;
+        top: 80px;
+        width: 100%;
+        background: colors.$black1;
+        text-align: right;
+        display: none;
+
+        ul, li {
+            display: block;
+            padding: 5px;
+        }
+    }
+
+    #user-check:checked ~ .nav__right-nav {
+        display: block;
+    }
+
+    #user-check:checked ~ .nav__label i:before {
+        content: "\f00d";
+    }
+}
+

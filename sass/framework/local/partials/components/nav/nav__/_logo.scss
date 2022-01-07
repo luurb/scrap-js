@@ -1,7 +1,8 @@
 @use '../../../../../config/colors';
+@use '../../../../fonts';
 
 .nav__logo {
-    font-size: 33px;
+    font-size: fonts.$v-large;
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: underline;

@@ -1,5 +1,7 @@
 @use '../../../../../config/colors';
 @use '../../../../../config/layers';
+@use '../../../../../config/breakpoints';
+
 
 .filters {
     height: calc(100% - 40px);

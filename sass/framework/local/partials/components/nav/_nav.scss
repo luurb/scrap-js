@@ -1,6 +1,8 @@
 @use '../../../fonts';
 @use '../../../../config/colors';
 @use '../../../../config/layers';
+@use '../../../../config/breakpoints';
+
 
 
 .nav {
@@ -26,8 +28,8 @@
         
         a {
             color: colors.$white-f;
-            font-size: 18px;
             font-weight: 500;
+            font-size: fonts.$small;
             letter-spacing: 1px;
             padding: 6px 8px;
             border-radius: 5px;
@@ -37,5 +39,16 @@
             color: colors.$black;
             background: colors.$white-f;
         }
+    }
+}
+
+@media (max-width: 950px) {
+    .nav {
+        ul {
+            a:hover {
+                color: colors.$light-green;
+                background: none;
+            }
+        } 
     }
 }

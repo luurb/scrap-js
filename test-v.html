@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9369359bc2.js" crossorigin="anonymous"></script>
+    <title>Valuescrap</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+
+</head>
+<body>
+    <script src="scripts/add-icons.js"></script>
+    <script src="scripts/stat-filter.js" defer></script>
+    <script src="feed/scripts/fetch.js"></script>
+    <nav class="nav flex">
+        <div class="nav__logo"><a href="valuebets.php">Value<span class="nav__seclogo">scrap</span></a></div>
+        <input type="checkbox" id="nav-check" class="none">
+        <label for="nav-check" class="nav__label nav__label--nav none">
+            <i class="fas fa-bars"></i>
+        </label>
+        <div class="nav__wrapper">
+            <div class="nav__left-nav">
+                <ul>
+                    <li><a class="active" href="valuebets.php">Valuebets</a></li>
+                    <li><a href="bet_history.php">Bet history</a></li>
+                    <li><a href="add_bet.php">Add bet</a></li>
+                    <li><a href="#"> Tutorials</a></li>    
+                </ul>
+            </div>
+            <input type="checkbox" id="user-check" class="none">
+            <label for="user-check" class="nav__label nav__label--user none">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="nav__right-nav">
+                <ul>
+                    <li><a href="#"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                    <li><a href="register.php"#><i class="fas fa-user-plus"></i>Sing up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main">
+        <div class="nav-box"></div>
+        <section class="main-table">
+            <div class="main-table__wrapper">
+                <table class="main-table__table main-table__valuebets-table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">ID</th>
+                            <th scope="colgroup">Bookmaker</th>
+                            <th scope="colgroup">Sport</th>
+                            <th scope="colgroup">Date and time</th>
+                            <th scope="colgroup">Teams</th>
+                            <th scope="colgroup">Bet</th>
+                            <th scope="colgroup">Odd</th>
+                            <th scope="colgroup">Value [%]</th>
+                            <th scope="colgroup">
+                                <input type="submit" value="Add/Delete" class="main-table__button">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Tiger​Gaming</td><td>Football</td><td>07/0119:30</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Bayern Munchen – Borussia MonchengladbachBundesliga - German Bundesliga</a></td><td>1 - corners</td><td>2</td><td>67.1</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>2</td><td>Pin​nacle</td><td>Football</td><td>07/0120:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Gremio Osasco Audax EC SP – Sc Camacariense Ba U20Brazil - Sao Paulo Cup U20</a></td><td>H1(−1.5)</td><td>2.96</td><td>2.49</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>3</td><td>Pin​nacle</td><td>Football</td><td>07/0119:45</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Edinburgh City – Elgin CityScotland - League Two</a></td><td>H1(0)</td><td>2.41</td><td>2.34</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>4</td><td>Sbo​bet</td><td>Football</td><td>07/0120:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Swindon Town – Manchester CityENGLISH FA CUP</a></td><td>H1(+2.5) - corners 1st period</td><td>2.12</td><td>2.32</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>5</td><td>Pin​nacle</td><td>Football</td><td>07/0120:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Bordeaux – MarseilleFrance - Ligue 1</a></td><td>Over 4</td><td>4.04</td><td>2.27</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>6</td><td>Pin​nacle</td><td>Football</td><td>07/0120:00</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Roda JC Kerkrade – MVV MaastrichtNetherlands - Eerste Divisie</a></td><td>Under 1 1st period</td><td>3.22</td><td>1.64</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>7</td><td>Pin​nacle</td><td>Football</td><td>07/0119:30</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Exeter City – PortsmouthEngland - EFL Trophy</a></td><td>Over 1.5 2nd team</td><td>2.24</td><td>1.56</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>8</td><td>Pin​nacle</td><td>Football</td><td>07/0119:45</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Coleraine FC U20 – Dungannon Swifts FC U20Northern Ireland - Premiership Development League U20</a></td><td>Over 4</td><td>2.24</td><td>0.43</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>9</td><td>Pin​nacle</td><td>Football</td><td>07/0119:45</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Manchester 62 FC – Lincoln Red Imps FCGibraltar - National League</a></td><td>Over 0.5 1st team</td><td>2.46</td><td>0.26</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>10</td><td>Pin​nacle</td><td>Football</td><td>07/0120:15</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Uniao Mogi FC SP – Sao Raimundo EC RRBrazil - Sao Paulo Cup U20</a></td><td>Over 1.5 1st team</td><td>2.03</td><td>0.21</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>11</td><td>Pin​nacle</td><td>Football</td><td>08/0100:45</td><td><a href="https://www.oddsportal.com/search/" target="_blank">River AC PI – SC Corinthians SPBrazil - Sao Paulo Cup U20</a></td><td>H1(+3)</td><td>1.8</td><td>0.2</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr><tr><td>12</td><td>Pin​nacle</td><td>Football</td><td>07/0122:30</td><td><a href="https://www.oddsportal.com/search/" target="_blank">Associacao Portuguesa de Desportos SP – SC Internacional RSBrazil - Sao Paulo Cup U20</a></td><td>Under 1.5 1st period</td><td>1.75</td><td>0.11</td><td><label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                            <span class="main-table__span main-table__valuebets-span">Add</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                            <span class="main-table__span main-table__valuebets-span">Delete</span>
+                        </label></td></tr></tbody> 
+                 </table>
+            </div>
+        </section> 
+        <section class="filters">
+            <input type="checkbox" id="stat-check" class="none">    
+            <div class="filters__wrapper none">
+                <label for="stat-check" title="Show stats">
+                    <i class="fas fa-cog none"></i>
+                </label>
+            </div>
+            <div class="filters__options">
+                <span class="filters__header">Filters</span>
+                <div class="filters__stats">
+                    <div class="filters__box">
+                        <form method="GET" action="click_button.php">
+                            <input type="submit" value="Filter" title="Filter bets for corners, fouls, shots, offsides, throws" class="filters__button filters__button--filter">
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+    <div class="footer__top flex">
+        <ul class="flex">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Tutorials</a></li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+        Copyright &copy 2021-2022 Valuescrap
+    </div>
+    </footer>
+</body>
+</html>

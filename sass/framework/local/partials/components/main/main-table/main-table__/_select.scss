@@ -1,4 +1,5 @@
 @use '../../../../../mixins';
+@use '../../../../../../config/breakpoints';
 
 .main-table__select {
     width: 100%;
@@ -10,4 +11,3 @@
 .main-table__select:hover {
     @include mixins.button-hover;
 }
-

@@ -23,17 +23,17 @@ class PrintValuebets
     public function printResults()
     {
         ?>
-        <table class="main-table__table">
+        <table class="main-table__table main-table__valuebets-table">
             <thead>
                 <tr>
-                    <th scope="colgroup"><span>ID</span></th>
-                    <th scope="colgroup"><span>Bookmaker</span></th>
-                    <th scope="colgroup"><span>Sport</span></th>
-                    <th scope="colgroup"><span>Date and time</span></th>
-                    <th scope="colgroup"><span>Teams</span></th>
-                    <th scope="colgroup"><span>Bet</span></th>
-                    <th scope="colgroup"><span>Odd</span></th>
-                    <th scope="colgroup"><span>Value [%]</span></th>
+                    <th scope="colgroup">ID</th>
+                    <th scope="colgroup">Bookmaker</th>
+                    <th scope="colgroup">Sport</th>
+                    <th scope="colgroup">Date and time</th>
+                    <th scope="colgroup">Teams</th>
+                    <th scope="colgroup">Bet</th>
+                    <th scope="colgroup">Odd</th>
+                    <th scope="colgroup">Value [%]</th>
                     <th scope="colgroup">
                         <input type="submit" value="Add/Delete" class="main-table__button">
                     </th>

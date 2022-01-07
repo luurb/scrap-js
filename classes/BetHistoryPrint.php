@@ -53,13 +53,13 @@ class BetHistoryPrint extends IDbInit
                         <td>
                             <label>
                                 <input type="checkbox" value="<?=$row['bet_id']?>" name="del[]" class="main-table__checkbox--del none">
-                                <span class="main-table__span">Delete</span>
+                                <span class="main-table__span">Del</span>
                             </label>
                         </td>
                         </form>
                         <td>
                             <form method="GET" action="modify.php">
-                                <button type="submit" value="<?=$row['bet_id']?>" name="submit" class="main-table__button">Modify</button>
+                                <button type="submit" value="<?=$row['bet_id']?>" name="submit" class="main-table__button">Mod</button>
                             </form>
                         </td>
                     </tr>

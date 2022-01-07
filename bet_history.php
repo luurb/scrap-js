@@ -30,9 +30,9 @@
                 </div>
             </section>
         <section class="filters"> 
+            <input type="checkbox" id="stat-check" class="none">
             <div class="filters__wrapper none">
                 <label for="stat-check" class="stat-filter" title="Show stats">
-                    <input type="checkbox" id="stat-check" class="none">
                     <i class="fas fa-cog none"></i>
                 </label>
             </div>
@@ -67,15 +67,15 @@
                 <span class="filters__header">All time stats</span>
                 <div class="filters__stats">
                     <div class="filters__box">
-                        <span class="filters__header">Return</span>
+                        <span class="filters__header filters__header--stat">Return</span>
                         <span class="filters__value"><?=$return;?></span>
                     </div>
                     <div class="filters__box">
-                        <span class="filters__header">Yield</span>
+                        <span class="filters__header filters__header--stat">Yield</span>
                         <span class="filters__value"><?=$yield;?>%</span>
                     </div>
                     <div class="filters__box">
-                        <span class="filters__header">Avg value</span>
+                        <span class="filters__header filters__header--stat">Avg value</span>
                         <span class="filters__value"><?=$avg_value;?>%</span>
                     </div>
                 </div>

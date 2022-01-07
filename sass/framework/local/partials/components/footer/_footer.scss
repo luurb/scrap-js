@@ -2,8 +2,9 @@
 @use '../../../../config/colors';
 
 .footer {
+    padding: 30px 0;
     font-family: fonts.$poppins;
-    font-size: 20px;
+    font-size: fonts.$small;
     background: colors.$black;
     color: colors.$grey-f;
     align-items: center;
@@ -11,7 +12,7 @@
     border-top: 2px solid colors.$grey-f;
 
     a {
-        padding: 0 20px;
+        padding: 0 10px;
         color: colors.$grey-f;
     }
 

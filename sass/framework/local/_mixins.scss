@@ -1,4 +1,6 @@
 @use '../config/colors' as c;
+@use '../local/fonts' as f;
+
 
 @mixin fa-btn {
     color: c.$white-f;
@@ -9,7 +11,7 @@
 @mixin button ($color: c.$black, $background: c.$grey2) {
     color: $color;
     background: $background;
-    font-size: 16px;
+    font-size: f.$small;
     padding: 8px;
     border-radius: 10px;
 }

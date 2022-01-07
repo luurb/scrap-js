@@ -52,12 +52,12 @@ function fetchJSON() {
             td = document.createElement('td');
             td.innerHTML = 
             `<label>
-                <input type="checkbox" class="main-table__checkbox--add none">                                           
-                <span class="main-table__span">Add</span>
+                <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+                <span class="main-table__span main-table__valuebets-span">Add</span>
             </label>
             <label>
-                <input type="checkbox" class="main-table__checkbox--del none">
-                <span class="main-table__span">Delete</span>
+                <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+                <span class="main-table__span main-table__valuebets-span">Del</span>
             </label>`;
             tr.appendChild(td);
             tbody.appendChild(tr);

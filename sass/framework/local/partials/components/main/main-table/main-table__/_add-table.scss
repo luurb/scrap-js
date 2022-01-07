@@ -1,4 +1,5 @@
 //Bet add page
+@use '../../../../../../config/breakpoints';
 
 .main-table__add-table {
     table-layout: fixed;
@@ -14,4 +15,40 @@
     th:nth-child(6) {
         width: 10%;
     }
+}
+
+@media (max-width: breakpoints.$desktop) {
+    .main-table__add-table {
+        display: flex;
+
+        th:nth-child(-n+11),
+        td:nth-child(-n+11) {
+            display: block;
+            width: 100%;
+            height: 50px;
+        }
+
+        th:nth-child(-n+11) {
+            padding: 15px;
+        }
+        tbody, thead {
+            width: 100%;
+            display: flex;    
+        }
+
+        tr {
+            width: 100%;
+        }
+
+        .main-table__select,
+        .main-table__button {
+            width: 30%;
+        }
+
+        .main-table__input {
+            width: 80%;
+        };
+    }
+
+
 }

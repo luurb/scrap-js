@@ -1,0 +1,27 @@
+@use '../../../../../config/breakpoints';
+@use '../../../../../config/colors';
+@use '../../../../../local/fonts';
+
+
+
+.nav__label {
+    color: colors.$white-f;
+    cursor: pointer;
+    
+    i {
+        font-size: fonts.$big;
+    }
+}
+
+@media (max-width: breakpoints.$desktop-small) and (min-width: breakpoints.$tablets) {
+    .nav__label--user {
+        display: block;
+    }
+}
+@media (max-width: breakpoints.$tablets) {
+    .nav__label--nav {
+        display: block;
+        position: fixed;
+        right: 50px;
+    }
+}

@@ -31,9 +31,9 @@
             </div>
         </section> 
         <section class="filters">
+            <input type="checkbox" id="stat-check" class="none">    
             <div class="filters__wrapper none">
                 <label for="stat-check" class="stat-filter" title="Show stats">
-                    <input type="checkbox" id="stat-check" class="none">    
                     <i class="fas fa-cog none"></i>
                 </label>
             </div>

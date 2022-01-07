@@ -1,7 +1,27 @@
+@use '../../../../../../config/breakpoints';
+@use '../../../../../fonts';
 .filters__wrapper {
     width: 220px;
     height: 40px;
-    font-size: 28px;
+    font-size: fonts.$large;
     text-align: center;
     padding: 5px;
+}
+
+@media (max-width: breakpoints.$desktop-mid) {
+    .filters__wrapper {
+        display: block;
+        position: fixed;
+        top: 80px;
+        right: 50px;
+                
+        i {
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+
+    #stat-check:checked ~ .filters__options {
+        right: 0;
+    }
 }

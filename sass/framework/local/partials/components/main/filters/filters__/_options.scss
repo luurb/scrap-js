@@ -1,6 +1,20 @@
 @use '../../../../../../config/colors';
+@use '../../../../../../config/breakpoints';
+
 
 .filters__options {
     text-align: center;
     border-top: 2px solid colors.$grey2;
+}
+
+@media (max-width: breakpoints.$desktop-mid) {
+    .filters__options {
+        position: fixed;
+        right: -100%;
+        top: 120px;
+        width: 220px;
+        background: colors.$grey1;
+        transition: all 0.3s ease;
+
+    }
 }

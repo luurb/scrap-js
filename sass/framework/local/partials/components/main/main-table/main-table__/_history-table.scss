@@ -1,0 +1,10 @@
+@use '../../../../../../config/breakpoints';
+
+@media (max-width: breakpoints.$desktop-mid) {
+    .main-table__history-table {
+        th:nth-child(10),
+        td:nth-child(10) {
+            display: none;
+        }
+    }
+}

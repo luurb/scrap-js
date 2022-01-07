@@ -1,11 +1,19 @@
+//Common 
 @forward 'main-table__/wrapper';
-@forward 'main-table__/add-table';
 @forward 'main-table__/table';
 @forward 'main-table__/button';
 @forward 'main-table__/span';
 @forward 'main-table__/checkbox';
 @forward 'main-table__/select';
 @forward 'main-table__/input';
+
+//Valuebets page
+@forward 'main-table__/valuebets-span';
+@forward 'main-table__/valuebets-table';
+
+//History page
+@forward 'main-table__/history-table';
 @forward 'main-table__/tr';
 
-
+//Add page
+@forward 'main-table__/add-table';

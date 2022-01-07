@@ -1,6 +1,19 @@
+@use '../../../../../config/colors';
+
 .footer__top {
-    height: 70px;
-    padding: 0 50px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
+
+    ul {
+        flex-wrap: wrap;
+         
+        li {
+            border-left: 1px solid colors.$grey-f;
+        }
+        
+        li:nth-child(4) {
+            border-right: 1px solid colors.$grey-f;
+        }
+    }
 }

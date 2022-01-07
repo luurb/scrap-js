@@ -1,4 +1,6 @@
 @use '../../../../../../config/colors';
+@use '../../../../../../config/breakpoints';
+
 
 .main-table__checkbox--del:checked ~ span {
     background: colors.$pink;
