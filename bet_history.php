@@ -11,8 +11,7 @@
     <?php include('includes/html/css.html'); ?>
 </head>
 <body>
-    <script src="scripts/add_icons.js"></script>
-    <script src="scripts/stat-filter.js" defer></script>
+    <script src="feed/scripts/add-icons.js"></script>
     <?php include('includes/html/header.html'); ?>
     <main class="main">
         <div class="nav-box"></div>
@@ -32,7 +31,7 @@
         <section class="filters"> 
             <input type="checkbox" id="stat-check" class="none">
             <div class="filters__wrapper none">
-                <label for="stat-check" class="stat-filter" title="Show stats">
+                <label for="stat-check" class="filters__filters-icon" title="Show stats">
                     <i class="fas fa-cog none"></i>
                 </label>
             </div>

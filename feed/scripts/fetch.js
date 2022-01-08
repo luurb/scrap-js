@@ -44,6 +44,8 @@ function fetchJSON() {
                     a.setAttribute("target", "_blank");
                     a.textContent = games[i][j];
                     td.appendChild(a);
+                } else if (j === 2) {
+                    td.innerHTML = '<span class="main-table__sport-span">' + games[i][j] + '</span>'
                 } else {
                     td.textContent = games[i][j];
                 }
@@ -54,13 +56,43 @@ function fetchJSON() {
             `<label>
                 <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
                 <span class="main-table__span main-table__valuebets-span">Add</span>
-            </label>
+             </label>
             <label>
                 <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
                 <span class="main-table__span main-table__valuebets-span">Del</span>
             </label>`;
             tr.appendChild(td);
             tbody.appendChild(tr);
+        }
+
+        addSportIcon();
+    }
+
+    //Function adding correct image depends on which sport td represent
+    function addSportIcon(){
+        let el = document.querySelector('.main-table__table');
+        el = el.querySelector('tbody').querySelectorAll('tr');
+    
+        for (let i = 0; i < el.length; i++) {
+            let td = el[i].querySelectorAll('td');
+    
+            switch(td[2].textContent){
+                case 'Football':
+                    td[2].innerHTML += '<img src="./img/football.svg" class="main-table__img none"/>';
+                    break;
+                case 'Basketball':
+                    td[2].innerHTML += '<img src="./img/basketball.svg" class="main-table__img none"/>';
+                    break;
+                case 'Tennis':
+                    td[2].innerHTML += '<img src="./img/tennis-ball.svg" class="main-table__img none"/>';
+                    break;
+                case 'Volleyball':
+                    td[2].innerHTML += '<img src="./img/volleyball.svg" class="main-table__img none"/>';
+                    break;
+                case 'Esport':
+                    td[2].innerHTML += '<img src="./img/esport.svg" class="main-table__img none"/>';
+                    break;
+            }
         }
     }
     setInterval(makeRequest, 120000);

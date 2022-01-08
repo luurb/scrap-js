@@ -290,11 +290,14 @@ button, select, input {
 }
 
 .main-table__span {
+  color: #1b1b1b;
+  background: #fff;
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 10px;
+  width: 100%;
   margin-bottom: 5px;
   display: inline-block;
-  padding: 10px;
-  background: #fff;
-  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -337,6 +340,17 @@ button, select, input {
   background: #cdcdcd;
 }
 
+@media (max-width: 950px) {
+  .main-table__img {
+    display: inline-block;
+    width: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .main-table__sport-span {
+    display: none;
+  }
+}
 @media (max-width: 1430px) {
   .main-table__valuebets-span {
     width: 70%;
@@ -362,8 +376,8 @@ button, select, input {
   }
   .main-table__valuebets-table tbody tr {
     padding: 10px 0;
-    display: grid;
     align-items: center;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     border-bottom: 1px solid #1b1b1b;
   }
@@ -382,6 +396,7 @@ button, select, input {
   .main-table__valuebets-table tbody td:nth-child(5) {
     grid-column: 1/5;
     grid-row: 3/4;
+    font-weight: 600;
   }
   .main-table__valuebets-table tbody td:nth-child(6) {
     grid-column: 2/3;
@@ -405,6 +420,77 @@ button, select, input {
   .main-table__history-table th:nth-child(10),
 .main-table__history-table td:nth-child(10) {
     display: none;
+  }
+}
+@media (max-width: 950px) {
+  .main-table__history-table th {
+    display: none;
+  }
+  .main-table__history-table th:nth-child(12) {
+    display: block;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 2;
+  }
+  .main-table__history-table tbody tr {
+    padding: 5px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border-bottom: 1px solid #1b1b1b;
+  }
+  .main-table__history-table tbody td:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .main-table__history-table tbody td:nth-child(2) {
+    grid-column: 4/5;
+    grid-row: 1/2;
+  }
+  .main-table__history-table tbody td:nth-child(3) {
+    grid-column: 5/6;
+    grid-row: 1/2;
+  }
+  .main-table__history-table tbody td:nth-child(4) {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+  .main-table__history-table tbody td:nth-child(5) {
+    grid-column: 1/7;
+    grid-row: 3/4;
+  }
+  .main-table__history-table tbody td:nth-child(6) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .main-table__history-table tbody td:nth-child(7) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+  .main-table__history-table tbody td:nth-child(8) {
+    grid-column: 5/6;
+    grid-row: 2/3;
+  }
+  .main-table__history-table tbody td:nth-child(9) {
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+  .main-table__history-table tbody td:nth-child(11) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .main-table__history-table tbody td:nth-child(12) {
+    grid-column: 6/7;
+    grid-row: 1/2;
+    height: 100%;
+    border-left: 1px solid #cdcdcd;
+  }
+  .main-table__history-table tbody td:nth-child(13) {
+    height: 100%;
+    grid-column: 6/7;
+    grid-row: 2/3;
+    border-left: 1px solid #cdcdcd;
   }
 }
 .main-table__tr--win td:nth-child(5),
@@ -469,6 +555,8 @@ button, select, input {
 .filters__options {
   text-align: center;
   border-top: 2px solid #cdcdcd;
+  max-height: calc(100vh - 110px);
+  overflow: auto;
 }
 
 @media (max-width: 1430px) {
@@ -499,6 +587,16 @@ button, select, input {
   .filters__wrapper i {
     display: inline-block;
     cursor: pointer;
+  }
+
+  #stat-check:checked ~ .filters__wrapper i {
+    transform: rotate(180deg) translateZ(0);
+    transition: all 0.8s ease;
+  }
+
+  #stat-check:not(:checked) ~ .filters__wrapper i {
+    transform: rotate(0deg) translateZ(0);
+    transition: all 0.8s ease;
   }
 
   #stat-check:checked ~ .filters__options {

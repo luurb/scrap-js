@@ -1,0 +1,8 @@
+@use '../../../../../../config/breakpoints';
+
+@media (max-width: breakpoints.$tablets) {
+    .main-table__img {
+        display: inline-block;
+        width: 20px;
+    }
+}

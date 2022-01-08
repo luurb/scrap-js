@@ -5,6 +5,9 @@
 .filters__options {
     text-align: center;
     border-top: 2px solid colors.$grey2;
+    max-height: calc(100vh - 110px);
+    overflow: auto;
+
 }
 
 @media (max-width: breakpoints.$desktop-mid) {
