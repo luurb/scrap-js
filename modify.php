@@ -23,7 +23,7 @@
                             $record = $modify->getRecord($_GET['submit']);
                         ?>
                     <form  method="GET" action="db_modify.php">
-                        <table class="main-table__table">
+                        <table class="main-table__table main-table__add-table">
                             <thead>
                                 <tr>
                                     <th scope="colgroup" class="id-col">Id</th>
@@ -42,13 +42,13 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="id-col">
+                                    <td>
                                         <input type="hidden" value="<?=$record['bet_id']?>" name="bet_id"><?=$record['bet_id']?>
                                     </td>
                                     <td><?=$record['bookiename']?></td>
                                     <td><?=$record['sportname']?></td>
                                     <td><?=$record['datetime']?></td>
-                                    <td class="teams-col"><?=$record['teams']?></td>
+                                    <td><?=$record['teams']?></td>
                                     <td><input type="text" name="bet" value="<?=$record['bet']?>" class="main-table__input"></td>                            
                                     <td><input type="text" name="odd" value="<?=$record['odd']?>" class="main-table__input"></td>
                                     <td><input type="text" name="value" value="<?=$record['value']?>" class="main-table__input"></td>      

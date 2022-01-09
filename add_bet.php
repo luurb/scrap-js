@@ -45,16 +45,16 @@
                                         <?=$game_add->getOptions('bookie')?>
                                     </select>
                                 </td>
-                                <td class="sport-col">
+                                <td>
                                     <select name="sport" class="main-table__select">
                                         <?=$game_add->getOptions('sport')?>
                                     </select>
                                 </td>
                                 <td><input type="date" name="date" class="main-table__input"></td>
                                 <td><input type="time" name="time" class="main-table__input"></td>
-                                <td class="teams-col"><input type="text" name="teams" value="" class="main-table__input"></td>
-                                <td class="bet-col"><input type="text" name="bet" value="" class="main-table__input"></td>
-                                <td class="odd-col"><input type="text" name="odd" value="" class="main-table__input"></td>
+                                <td><input type="text" name="teams" value="" class="main-table__input"></td>
+                                <td><input type="text" name="bet" value="" class="main-table__input"></td>
+                                <td><input type="text" name="odd" value="" class="main-table__input"></td>
                                 <td><input type="text" name="value" value="" class="main-table__input"></td>
                                 <td><input type="text" name="stake" value="" class="main-table__input"></td>
                                 <td>
