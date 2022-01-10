@@ -21,7 +21,7 @@
                 
                 $game_add = new classes\BetHistoryAdd();
             ?>   
-                <form action="add.php" method="GET">
+                <form action="php/add.php" method="GET">
                     <table class="main-table__table main-table__add-table">
                         <thead>
                             <tr>

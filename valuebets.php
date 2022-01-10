@@ -9,11 +9,13 @@
     <?php include('includes/html/css.html'); ?>
 </head>
 <body>
-    <script src="feed/scripts/fetch.js"></script>
+    <script type="module" src="feed/scripts/fetch.js"></script>
 
     <?php include('includes/html/header.html'); ?>
     <main class="main">
-        <div class="nav-box"></div>
+        <div class="nav-box">
+            <div class="nav-box__timer"></div>
+        </div>
         <section class="main-table">
             <div class="main-table__wrapper">
                 <?php

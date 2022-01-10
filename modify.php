@@ -22,7 +22,7 @@
                             $modify = new classes\BetHistoryModify();
                             $record = $modify->getRecord($_GET['submit']);
                         ?>
-                    <form  method="GET" action="db_modify.php">
+                    <form  method="GET" action="php/db_modify.php">
                         <table class="main-table__table main-table__add-table">
                             <thead>
                                 <tr>

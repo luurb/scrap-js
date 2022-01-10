@@ -11,7 +11,7 @@
     <?php include('includes/html/css.html'); ?>
 </head>
 <body>
-    <script src="feed/scripts/add-icons.js"></script>
+    <script type="module" src="feed/scripts/modules/add-icons.mjs"></script>
     <?php include('includes/html/header.html'); ?>
     <main class="main">
         <div class="nav-box"></div>

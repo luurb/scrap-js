@@ -1,9 +1,7 @@
 <?php
-    function adding_class($class_name)
-    {
-        require "./classes/$class_name.php";
-    }
-    spl_autoload_register('adding_class');
+    header('Location: add_bet.php');
+
+
     if (isset($_GET['submit'])) {
         if ($_GET['result'] == "1" || $_GET['result'] == "0") {
             $return = $_GET['odd'] * $_GET['stake'] * intval($_GET['result']) -  $_GET['stake'];
@@ -25,7 +23,5 @@
         );
        $game_add = new BetHistoryAdd();
        $game_add->newGameAdd($arr);
-       header('Location: add_bet.php');
-
     }
 ?>
