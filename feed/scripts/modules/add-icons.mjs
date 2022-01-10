@@ -24,5 +24,6 @@ function addSportIcon(){
         }
     }
 }
-
 window.addEventListener('load', addSportIcon);
+
+export {addSportIcon};

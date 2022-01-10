@@ -1,3 +1,5 @@
+import * as AddIcons from './modules/add-icons.mjs';
+
 function fetchJSON() {
     let request = new XMLHttpRequest();
     makeRequest();
@@ -65,39 +67,13 @@ function fetchJSON() {
             tbody.appendChild(tr);
         }
 
-        addSportIcon();
+        AddIcons.addSportIcon();
     }
 
     //Function adding correct image depends on which sport td represent
-    function addSportIcon(){
-        let el = document.querySelector('.main-table__table');
-        el = el.querySelector('tbody').querySelectorAll('tr');
-    
-        for (let i = 0; i < el.length; i++) {
-            let td = el[i].querySelectorAll('td');
-    
-            switch(td[2].textContent){
-                case 'Football':
-                    td[2].innerHTML += '<img src="./img/football.svg" class="main-table__img none"/>';
-                    break;
-                case 'Basketball':
-                    td[2].innerHTML += '<img src="./img/basketball.svg" class="main-table__img none"/>';
-                    break;
-                case 'Tennis':
-                    td[2].innerHTML += '<img src="./img/tennis-ball.svg" class="main-table__img none"/>';
-                    break;
-                case 'Volleyball':
-                    td[2].innerHTML += '<img src="./img/volleyball.svg" class="main-table__img none"/>';
-                    break;
-                case 'Esport':
-                    td[2].innerHTML += '<img src="./img/esport.svg" class="main-table__img none"/>';
-                    break;
-            }
-        }
-    }
+
     setInterval(makeRequest, 120000);
     //setInterval(makeRequest, 2000);
-
 }
 
 fetchJSON();
