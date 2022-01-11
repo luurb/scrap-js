@@ -12,6 +12,14 @@
     border-radius: 10px;
     font-size: fonts.$small;
 
+    tr {
+        @keyframes blinker {
+            50% {
+                opacity: 0.2;
+            }
+        }
+    }
+
     th, td {
         padding: 5px;
     }

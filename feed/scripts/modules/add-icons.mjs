@@ -1,3 +1,4 @@
+//Function adding correct image depends on which sport td represent
 function addSportIcon(){
     let el = document.querySelector('.main-table__table');
     el = el.querySelector('tbody').querySelectorAll('tr');
