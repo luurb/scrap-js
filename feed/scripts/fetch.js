@@ -1,5 +1,9 @@
 import * as AddIcons from './modules/add-icons.mjs';
 
+let minutes;
+let seconds;
+let iter;
+
 function fetchJSON() {
     let request = new XMLHttpRequest();
     makeRequest();
@@ -66,14 +70,40 @@ function fetchJSON() {
             tr.appendChild(td);
             tbody.appendChild(tr);
         }
-
+        //Function adding correct image depends on which sport td represent
         AddIcons.addSportIcon();
+        initTimer(120000);
     }
 
-    //Function adding correct image depends on which sport td represent
+    function initTimer(interval) {
+        seconds = interval / 1000;
+        minutes = Math.round(seconds / 60);
+        seconds = seconds - minutes * 60;
+        printTimer();
+        iter = setInterval(printTimer, 1000);
+    }
 
-    setInterval(makeRequest, 120000);
-    //setInterval(makeRequest, 2000);
+    function printTimer() {
+        let timerBox = document.querySelector('.nav-box__timer');
+        if (seconds < 10) {
+            seconds = '0' + seconds;
+        }
+
+        timerBox.textContent = '0' + minutes + ':' + seconds;
+
+        if (seconds == '00' && minutes == 0) {
+            clearInterval(iter);
+            iter = null;
+            makeRequest();
+        } else if (seconds === '00') {
+            seconds = 59;
+            minutes = Number(minutes);
+            minutes--;
+        } else {
+            seconds = Number(seconds);
+            seconds--;
+        }
+    }
 }
 
 fetchJSON();
