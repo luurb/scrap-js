@@ -226,18 +226,6 @@ button, select, input {
   background: #f7f7f7;
 }
 
-.nav-box {
-  background: #ededed;
-  box-shadow: 0 5px 10px #cdcdcd;
-  padding: 5px;
-}
-
-@media (max-width: 1430px) {
-  .nav-box {
-    position: sticky;
-    top: 80px;
-  }
-}
 .main-table {
   height: inherit;
   padding: 30px 20px;
@@ -726,6 +714,22 @@ button, select, input {
   .footer__bottom {
     font-size: 14px;
   }
+}
+.nav-box {
+  background: #ededed;
+  box-shadow: 0 5px 10px #cdcdcd;
+  padding: 5px;
+}
+
+@media (max-width: 1430px) {
+  .nav-box {
+    position: sticky;
+    top: 80px;
+  }
+}
+.nav-box__timer {
+  padding: 5px 50px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=styles.css.map */
