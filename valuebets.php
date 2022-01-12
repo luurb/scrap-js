@@ -48,7 +48,7 @@
                 <span class="filters__header">Options</span>
                 <div class="filters__stats">
                     <div class="filters__box">
-                        <span class="filters__header filters__header--stat">Refresh rate</span>
+                        <span class="filters__header filters__header--stat">Refresh timeout</span>
                         <div class="filters__refresh-wrapper">
                             <span class="filters__refresh-iter">+</span>
                             <span class="filters__refresh-num">2</span>
