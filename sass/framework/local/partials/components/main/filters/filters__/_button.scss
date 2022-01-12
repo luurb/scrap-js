@@ -2,7 +2,7 @@
 @use '../../../../../../config/colors';
 
 .filters__button {
-    width: 80%;
+    width: 70%;
     text-transform: unset;
     @include mixins.button;
 }

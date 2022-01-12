@@ -1,0 +1,18 @@
+@use '../../../../../../config/colors';
+
+.filters__refresh-wrapper {
+    padding: 8px;
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    background: colors.$white-f;
+    color: colors.$black1;
+
+    span {
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
+    }
+}

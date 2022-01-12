@@ -10,6 +10,7 @@
 </head>
 <body>
     <script type="module" src="feed/scripts/fetch.js"></script>
+    <script src="feed/scripts/refresh-option.js" defer></script>
 
     <?php include('includes/html/header.html'); ?>
     <main class="main">
@@ -42,6 +43,18 @@
                 <div class="filters__stats">
                     <div class="filters__box">
                         <?php $main->printButton(); ?>
+                    </div>
+                </div>
+                <span class="filters__header">Options</span>
+                <div class="filters__stats">
+                    <div class="filters__box">
+                        <span class="filters__header filters__header--stat">Refresh rate</span>
+                        <div class="filters__refresh-wrapper">
+                            <span class="filters__refresh-iter">+</span>
+                            <span class="filters__refresh-num">2</span>
+                            <span class="filters__refresh-iter">-</span>
+                        </div>
+                        <button class="filters__button filters__submit filters__refresh">Refresh</button>
                     </div>
                 </div>
             </div>

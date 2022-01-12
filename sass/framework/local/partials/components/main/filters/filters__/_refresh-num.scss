@@ -1,0 +1,7 @@
+@use '../../../../../../config/colors';
+
+.filters__refresh-num {
+    font-weight: 600;
+    border-left: 2px solid colors.$grey1;
+    border-right: 2px solid colors.$grey1;
+}

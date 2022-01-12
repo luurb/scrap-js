@@ -1,8 +1,14 @@
+//Common
 @forward 'filters__/options';
 @forward 'filters__/wrapper';
 @forward 'filters__/header';
 @forward 'filters__/stats';
 @forward 'filters__/button';
+
+//Valuebets page filters
+@forward 'filters__/refresh-num';
+@forward 'filters__/refresh-wrapper';
+
 
 //History page filters
 @forward 'filters__/box';

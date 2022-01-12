@@ -245,11 +245,6 @@ button, select, input {
   border-radius: 10px;
   font-size: 16px;
 }
-@keyframes blinker {
-  50% {
-    opacity: 0.2;
-  }
-}
 .main-table__table th, .main-table__table td {
   padding: 5px;
 }
@@ -630,7 +625,7 @@ button, select, input {
 }
 
 .filters__button {
-  width: 80%;
+  width: 70%;
   text-transform: unset;
   color: #1b1b1b;
   background: #cdcdcd;
@@ -651,8 +646,8 @@ button, select, input {
 
 .filters__refresh-num {
   font-weight: 600;
-  border-left: 1px solid #f7f7f7;
-  border-right: 1px solid #f7f7f7;
+  border-left: 2px solid #ededed;
+  border-right: 2px solid #ededed;
 }
 
 .filters__refresh-wrapper {
@@ -662,12 +657,13 @@ button, select, input {
   display: flex;
   justify-content: center;
   border-radius: 10px;
-  background: #1b1b1b;
-  color: #fff;
+  background: #fff;
+  color: #111;
 }
 .filters__refresh-wrapper span {
   text-align: center;
   width: 100%;
+  cursor: pointer;
 }
 
 .filters__box {
@@ -694,7 +690,7 @@ button, select, input {
 }
 
 .filters__submit {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .filters__submit:hover {
@@ -761,6 +757,12 @@ button, select, input {
 .nav-box__timer {
   padding: 5px 50px;
   font-size: 18px;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
