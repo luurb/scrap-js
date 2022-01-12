@@ -1,6 +1,6 @@
 <?php
-    header('Location: add_bet.php');
 
+    require_once ('../autoload.php');
 
     if (isset($_GET['submit'])) {
         if ($_GET['result'] == "1" || $_GET['result'] == "0") {
@@ -21,7 +21,9 @@
            $_GET['result'],
            $return
         );
-       $game_add = new BetHistoryAdd();
+       $game_add = new \classes\BetHistoryAdd();
        $game_add->newGameAdd($arr);
+       header('Location: ../add_bet.php');
+
     }
 ?>

@@ -24,8 +24,7 @@ class BetHistoryAdd extends IDbInit
     public function newGameAdd($arr)
     {
         $db_obj = $this->dbConnect();
-        require_once("./classes/BetHistoryModify.php");
-        $modify = new BetHistoryMOdify();
+        $modify = new BetHistoryModify();
         $arr = $modify->delBadCharacters($db_obj, $arr);
         $query = "INSERT INTO bet_history VALUES (0, $arr[0], $arr[1], '$arr[2]', ";
         $query .= "'$arr[3]', '$arr[4]', $arr[5], $arr[6], $arr[7], '$arr[8]', $arr[9])";

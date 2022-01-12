@@ -42,7 +42,6 @@ class BetHistoryModify extends IDbInit
             $query = "DELETE FROM bet_history WHERE bet_id = $id";
             if (!$db_obj->query($query)) {
                 echo "error BetHistoryMOdify delete";
-                
             } 
         }
         $db_obj->close();

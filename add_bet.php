@@ -19,7 +19,7 @@
 
                 require_once ('autoload.php');
                 
-                $game_add = new classes\BetHistoryAdd();
+                $game_add = new \classes\BetHistoryAdd();
             ?>   
                 <form action="php/add.php" method="GET">
                     <table class="main-table__table main-table__add-table">
@@ -64,7 +64,7 @@
                                     <option value="0">0</option>
                                 </select>   
                             </td> 
-                                <td><input type="submit" value="Add" name="submit" class="main-table__button""></td>
+                                <td><input type="submit" value="Add" name="submit" class="main-table__button"></td>
                             </tr>
                         </tbody>
                     </table>
