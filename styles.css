@@ -277,7 +277,7 @@ button, select, input {
   width: 100%;
   color: #1b1b1b;
   background: #cdcdcd;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 10px;
 }
@@ -290,7 +290,7 @@ button, select, input {
 .main-table__span {
   color: #1b1b1b;
   background: #fff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 10px;
   width: 100%;
@@ -313,7 +313,7 @@ button, select, input {
   text-align: center;
   color: #1b1b1b;
   background: #cdcdcd;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 10px;
 }
@@ -328,7 +328,7 @@ button, select, input {
   text-align: center;
   color: #1b1b1b;
   background: #fff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 10px;
 }
@@ -615,13 +615,13 @@ button, select, input {
 .filters__header {
   display: block;
   padding-top: 5px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 .filters__header--stat {
   padding-bottom: 2px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .filters__stats {
@@ -634,7 +634,7 @@ button, select, input {
   text-transform: unset;
   color: #1b1b1b;
   background: #cdcdcd;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 10px;
 }
@@ -649,6 +649,27 @@ button, select, input {
   color: #1b1b1b;
 }
 
+.filters__refresh-num {
+  font-weight: 600;
+  border-left: 1px solid #f7f7f7;
+  border-right: 1px solid #f7f7f7;
+}
+
+.filters__refresh-wrapper {
+  padding: 8px;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  background: #1b1b1b;
+  color: #fff;
+}
+.filters__refresh-wrapper span {
+  text-align: center;
+  width: 100%;
+}
+
 .filters__box {
   padding: 0 10px 10px 10px;
 }
@@ -657,7 +678,7 @@ button, select, input {
   width: 100%;
   color: #1b1b1b;
   background: #fff;
-  font-size: 16px;
+  font-size: 14px;
   padding: 8px;
   border-radius: 10px;
 }
