@@ -41,7 +41,11 @@
     a:hover {
         text-decoration: underline;
     }
+}
 
-    
+@media (max-width: breakpoints.$phones) {
+    .main-table__table {
+        font-size: fonts.$v-small;
+    }
 }
 
