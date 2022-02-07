@@ -3,27 +3,36 @@ import * as Print from './modules/print-games.mjs';
 let minutes;
 let seconds;
 let iter;
-let request = new XMLHttpRequest();
 let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
 
 function makeRequest() {
-    request.onreadystatechange = checkConnection;
-    request.open('GET', './feed/games.txt');
-    request.responseType = 'text';
-    request.send();
-}
+    fetch('./feed/games.json')
+        .then(response => {
+            if (! response.ok) {
+                return null;
+            }
 
-//Function check if response status is correct
-function checkConnection() {
-    if (request.readyState === XMLHttpRequest.DONE) {
-        if (request.status === 200) {
-            Print.print(request);
-            initTimer(Number(time.textContent) * 60000);
-        } else {
-            alert('Not working');
-        }
-    }
+            let type = response.headers.get('content-type');
+            if (type !== 'application/json') {
+                throw new TypeError('Expected JSON, got ${type}');
+            }
+
+            return response.json();
+        })
+        .then(response => {
+            Print.print(response);
+            initTimer(Number(time.textContent) * 5000);
+        })
+        .catch(e => {
+            if (e instanceof NetworkError) {
+                alert('Check your Internet connection');
+            } else if (e instanceof TypeError) {
+                alert('Something wrong with our server');
+            } else {
+                console.error(e);
+            }
+        });
 }
 
 function initTimer(interval) {

@@ -1,8 +1,7 @@
 import * as AddIcons from './add-icons.mjs';
 
  //Function print main table with games
-function print(request) {
-    const games = JSON.parse(request.response);
+function print(games) {
     let table = document.querySelector('.main-table__table');
     let tbody = table.querySelector('tbody');
     let tr = tbody.querySelectorAll('tr'); 
