@@ -3,7 +3,7 @@
 namespace classes;
 
 //Abstract class with data to login to database
-abstract class IDbInit
+class IDbInit
 {
     protected $addr = "localhost";
     protected $login = "luckyluk";
@@ -16,7 +16,7 @@ abstract class IDbInit
         if (!$db_obj->connect_errno) {
             return $db_obj;
         } else {
-            echo $db_obj->connect_errno();
+            echo $db_obj->connect_error;
             $db_obj->close();
             return 0;
         }

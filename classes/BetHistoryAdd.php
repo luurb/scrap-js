@@ -10,14 +10,19 @@ class BetHistoryAdd extends IDbInit
     public function getOptions($table_name)
     {
         $db_obj = $this->dbConnect();
-        $query = "SELECT *FROM $table_name";
-        if ($result = $db_obj->query($query)) {
-            while($row = $result->fetch_array()){
-                echo "<option value=" ."'$row[0]'" . ">$row[1]</option>";//bookie id
+        if ($db_obj) {
+            $query = "SELECT *FROM $table_name";
+            if ($result = $db_obj->query($query)) {
+                while($row = $result->fetch_array())
+                    //bookie id
+                    echo "<option value=" ."'$row[0]'" . ">$row[1]</option>";
+            } else {
+                echo "<option></option>";
             }
-        } else {
-            echo "<option></option>";
         }
+        else {
+            echo "<option></option>";
+        }         
         $db_obj->close();
     }
 

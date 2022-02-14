@@ -24,7 +24,7 @@ function print(games) {
                 a.textContent = games[i][j];
                 td.appendChild(a);
             } else if (j === 2) {
-                td.innerHTML = '<span class="main-table__sport-span">' + games[i][j] + '</span>'
+                td.innerHTML = '<span class="main-table__sport-span">' + games[i][j] + '</span>';
             } else {
                 td.textContent = games[i][j];
             }
