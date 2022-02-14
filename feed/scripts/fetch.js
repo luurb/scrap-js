@@ -1,4 +1,5 @@
 import * as Print from './modules/print-games.mjs';
+import * as Switch from './modules/checked-switch.mjs';
 
 let minutes;
 let seconds;
@@ -22,10 +23,15 @@ function makeRequest() {
         })
         .then(response => {
             Print.print(response);
-            initTimer(Number(time.textContent) * 5000);
+            initTimer(Number(time.textContent) * 60000);
+            let tbody = document.querySelector('.main-table__table tbody');
+            tbody.addEventListener('click', e => {
+                Switch.checkboxSwitch(e);
+            });
+
         })
         .catch(e => {
-            if (e instanceof NetworkError) {
+            if (e.name == 'NetworkError') {
                 alert('Check your Internet connection');
             } else if (e instanceof TypeError) {
                 alert('Something wrong with our server');
