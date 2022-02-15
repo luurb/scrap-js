@@ -49,7 +49,7 @@ function print(games) {
 
     //Add blink animation for new games
     for (let i = 0; i < newGames.length; i++) {
-        tr[newGames[i]].style.animation = '2s blinker 0s linear 3';
+        tr[newGames[i]].style.animation = '2s blinker 0s linear 2';
     }
     AddIcons.addSportIcon();
 }
