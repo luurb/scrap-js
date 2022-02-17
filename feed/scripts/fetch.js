@@ -1,5 +1,4 @@
 import * as Print from './modules/print-games.mjs';
-import * as Switch from './modules/checked-switch.mjs';
 
 let minutes;
 let seconds;
@@ -8,33 +7,29 @@ let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
 
 function makeRequest() {
-    fetch('./feed/games.json')
+    fetch('./feed/json.php')
         .then(response => {
             if (! response.ok) {
                 return null;
             }
 
             let type = response.headers.get('content-type');
-            if (type !== 'application/json') {
-                throw new TypeError('Expected JSON, got ${type}');
+            if (type !== 'text/html; charset=UTF-8') {
+                throw new TypeError('Expected text/html, got ' + type);
             }
 
-            return response.json();
+            return response.text();
         })
         .then(response => {
+            response = JSON.parse(response);
             Print.print(response);
             initTimer(Number(time.textContent) * 60000);
-            let tbody = document.querySelector('.main-table__table tbody');
-            tbody.addEventListener('click', e => {
-                Switch.checkboxSwitch(e);
-            });
-
         })
         .catch(e => {
             if (e.name == 'NetworkError') {
                 alert('Check your Internet connection');
             } else if (e instanceof TypeError) {
-                alert('Something wrong with our server');
+                alert('Something wrong with our server' + e.message);
             } else {
                 console.error(e);
             }
