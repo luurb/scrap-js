@@ -17,3 +17,11 @@
 .none {
     display: none;
 }
+
+.tr-blink {
+    animation: 2s blinker 0s linear 1;
+}
+
+.tbody-blink {
+    animation: 1s blinker 0s linear 1;
+}

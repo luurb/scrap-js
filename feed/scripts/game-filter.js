@@ -5,7 +5,9 @@ import * as Game from './modules/classes/Game.mjs';
 let filterBtn = document.querySelector('.main-table__button');
 filterBtn.addEventListener('click', () => {
     let checkbox = document.querySelectorAll('.main-table__checkbox:checked');
-    for (let i = 0; i < checkbox.length; i++) {
+    let checkBoxLength = checkbox.length;
+
+    for (let i = 0; i < checkBoxLength; i++) {
         let tr = checkbox[i].parentNode.parentNode.parentNode;
         let game = createGame(tr);
         let condition = checkbox[i].className.indexOf('del');
@@ -14,19 +16,18 @@ filterBtn.addEventListener('click', () => {
 });
 
 function createGame(tr) {
-    let date = tr.childNodes[3].textContent;
-    let teams = tr.childNodes[4].textContent;
-    let bet = tr.childNodes[5].textContent;
-    let game = new Game.Game(teams, bet, date);
+    let game = new Game.Game(
+        tr.childNodes[4].textContent,
+        tr.childNodes[5].textContent, 
+        tr.childNodes[3].textContent);
     return game;
 }
 
 function hideGame(game, tr) {
     DbConnect.dbConnect( db => {
-        let newGame = {game: game};
-        DbOperation.addGame(newGame, db);
+        DbOperation.addGame({game: game}, db);
     });
-    tr.style.animation = '2s blinker 0s linear 1';
+    tr.className = 'tr-blink';
     setTimeout(() => {
         tr.remove();
     }, 1000);

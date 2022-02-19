@@ -68,9 +68,8 @@ function makeRequest() {
 refreshButton.addEventListener('click', () => {
     CountDown.clearCountDown();
     setTimeout(makeRequest, 1000);
-    let tbody = document.querySelector('.main-table__table');
-    tbody = tbody.querySelector('tbody');
-    tbody.style.animation = '1s blinker 0s linear 1';
+    let tbody = document.querySelector('.main-table__table tbody');
+    tbody.className = 'tbody-blink';
 });
 
 makeRequest();

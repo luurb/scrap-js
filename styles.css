@@ -28,6 +28,11 @@
     grid-column: 1/3;
   }
 }
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
+}
 .flex {
   display: flex;
 }
@@ -46,6 +51,14 @@
 
 .none {
   display: none;
+}
+
+.tr-blink {
+  animation: 2s blinker 0s linear 1;
+}
+
+.tbody-blink {
+  animation: 1s blinker 0s linear 1;
 }
 
 a {
@@ -757,12 +770,6 @@ button, select, input {
 .nav-box__timer {
   padding: 5px 50px;
   font-size: 18px;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0.2;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */

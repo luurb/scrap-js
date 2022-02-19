@@ -7,8 +7,9 @@ function createNewTableBody(games) {
     let newGames = findNewGames(games, tr);
     tbody.remove();
     tbody = document.createElement('tbody');
+    let gamesLength = games.length;
 
-    for (let i = 0; i < games.length; i++) {
+    for (let i = 0; i < gamesLength; i++) {
         tr = document.createElement('tr');
         let td;
         for (let j = 0; j < games[i].length; j++) {
@@ -58,12 +59,15 @@ function findNewGames(games, tr) {
     let newGames = [];
     let iter = 0;
     let check;
-    for (let i = 0; i < games.length; i++) {
+    let gamesLength = games.length;
+    let trLength = tr.length;
+
+    for (let i = 0; i < gamesLength; i++) {
         check = 0;
         //If table is empty break loop
         if (tr.length === 0) 
             break;
-        for (let j = 0; j < tr.length; j++) {
+        for (let j = 0; j < trLength; j++) {
             td = tr[j].querySelectorAll('td');
             if (td[4].textContent === games[i][4] && 
                 td[5].textContent === games[i][5]) {

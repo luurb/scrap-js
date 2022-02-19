@@ -2,8 +2,9 @@
 function addSportIcon(){
     let el = document.querySelector('.main-table__table');
     el = el.querySelector('tbody').querySelectorAll('tr');
+    let elLength = el.lengthl;
 
-    for (let i = 0; i < el.length; i++) {
+    for (let i = 0; i < elLength; i++) {
         let td = el[i].querySelectorAll('td');
 
         switch(td[2].textContent){
@@ -25,6 +26,7 @@ function addSportIcon(){
         }
     }
 }
+
 window.addEventListener('load', addSportIcon);
 
 export {addSportIcon};
