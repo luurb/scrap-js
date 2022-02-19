@@ -1,6 +1,6 @@
-import * as DbConnect from './modules/db-connect.mjs';
-import * as DbOperation from './modules/db-operation.mjs';
-import * as Game from './modules/classes/Game.js';
+import * as DbConnect from './modules/indexedDb/db-connect.mjs';
+import * as DbOperation from './modules/indexedDb/db-operation.mjs';
+import * as Game from './modules/classes/Game.mjs';
 
 let filterBtn = document.querySelector('.main-table__button');
 filterBtn.addEventListener('click', () => {

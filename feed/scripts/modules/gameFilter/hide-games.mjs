@@ -1,4 +1,4 @@
-import * as DbConnect from './db-connect.mjs';
+import * as DbConnect from '../indexedDb/db-connect.mjs';
 
 function findGamesToHide(games) {
     return new Promise((resolve, reject) => {
