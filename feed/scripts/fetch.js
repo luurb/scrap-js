@@ -4,7 +4,7 @@ import * as CountDown from './modules/fetch/count-down.mjs';
 let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
 
-function makeRequest() {
+/*function makeRequest() {
     fetch('./feed/json.php')
         .then(response => {
             if (! response.ok) {
@@ -32,10 +32,10 @@ function makeRequest() {
                 console.error(e);
             }
         });
-}
+}*/
 
 //Testing
-/*function makeRequest() {
+function makeRequest() {
     fetch('./feed/games.json')
         .then(response => {
             if (! response.ok) {
@@ -51,7 +51,7 @@ function makeRequest() {
         })
         .then(response => {
             Print.print(response);
-            initTimer(Number(time.textContent) * 60000);
+            CountDown.initTimer(2000000, makeRequest);
         })
         .catch(e => {
             if (e.name == 'NetworkError') {
@@ -62,7 +62,7 @@ function makeRequest() {
                 console.error(e);
             }
         });
-}*/
+}
 
 //Refresh timer and add some blinking to tbody table
 refreshButton.addEventListener('click', () => {

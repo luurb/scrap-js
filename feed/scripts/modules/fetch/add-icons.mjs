@@ -2,7 +2,7 @@
 function addSportIcon(){
     let el = document.querySelector('.main-table__table');
     el = el.querySelector('tbody').querySelectorAll('tr');
-    let elLength = el.lengthl;
+    let elLength = el.length;
 
     for (let i = 0; i < elLength; i++) {
         let td = el[i].querySelectorAll('td');

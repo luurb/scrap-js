@@ -1,4 +1,4 @@
-@use '../../../../../../config/breakpoints';
+@use '../../../../../../../config/breakpoints';
 
 @media (max-width: breakpoints.$desktop-mid) {
     .main-table__valuebets-span {

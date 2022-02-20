@@ -11,8 +11,9 @@
 
 
 //Valuebets page
-@forward 'main-table__/valuebets-span';
-@forward 'main-table__/valuebets-table';
+@forward 'main-table__/valuebets/valuebets-span';
+@forward 'main-table__/valuebets/valuebets-table';
+@forward 'main-table__/valuebets/valuebets-clock';
 
 //History page
 @forward 'main-table__/history-table';

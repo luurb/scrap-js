@@ -24,7 +24,7 @@ function printTimer() {
 function setTimer() {
     if (seconds == '00' && minutes == 0) {
         clearCountDown();
-        makeRequest;
+        makeRequest();
     } else {
         if (seconds === '00') {
             seconds = 59;

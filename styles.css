@@ -363,13 +363,15 @@ button, select, input {
     padding: 5px;
   }
 }
-@media (max-width: 1700px) {
-  .main-table__valuebets-table th:nth-child(1),
-.main-table__valuebets-table td:nth-child(1) {
-    display: none;
-  }
-}
-@media (max-width: 950px) {
+/*@media (max-width: breakpoints.$desktop) {
+    .main-table__valuebets-table {
+        th:nth-child(1),
+        td:nth-child(1) {
+            display: none;
+        }
+    }
+}*/
+@media (max-width: 1430px) {
   .main-table__valuebets-table th {
     display: none;
   }
@@ -387,6 +389,10 @@ button, select, input {
     grid-template-columns: repeat(4, 1fr);
     border-bottom: 1px solid #1b1b1b;
   }
+  .main-table__valuebets-table tbody td:nth-child(1) {
+    grid-column: 4/5;
+    grid-row: 3/4;
+  }
   .main-table__valuebets-table tbody td:nth-child(2) {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -400,7 +406,7 @@ button, select, input {
     grid-row: 1/2;
   }
   .main-table__valuebets-table tbody td:nth-child(5) {
-    grid-column: 1/5;
+    grid-column: 1/4;
     grid-row: 3/4;
     font-weight: 600;
   }
@@ -422,6 +428,11 @@ button, select, input {
     border-left: 1px solid #cdcdcd;
   }
 }
+.main-table__valuebets-clock {
+  padding: 5px 10px;
+  display: block;
+}
+
 @media (max-width: 1430px) {
   .main-table__history-table th:nth-child(10),
 .main-table__history-table td:nth-child(10) {
