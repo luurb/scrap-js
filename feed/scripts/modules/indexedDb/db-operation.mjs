@@ -4,7 +4,7 @@ function addGame(newGame, db) {
     objectStore.add(newGame);
     transaction.oncomplete = () => {
         console.log('Added game to db');
-        displayData(db);
+        //displayData(db);
     };
 
     transaction.onerror = () => {

@@ -23,21 +23,35 @@ function findNewGames(games, trList) {
     let trListLength = trListArray.length;
     let newTrArray = [];
 
-    for (let i = 0; i < trListLength; i++) {
-        trListArray[i] = Array.from(trListArray[i].childNodes);
-    }
-
-    for (let i = 0; i < gamesLength; i++) {
-        let exists = trListArray.findIndex(arr => arr.includes(games[i][4]));
-        let bet = trListArray.findIndex(arr => arr.includes(games[i][5]));
-
-        if (exists === -1 || exists !== bet) {
+    if (trList.length === 0) {
+        for (let i = 0; i < gamesLength; i++) {
             newTrArray.push(createNewTr(games[i]));
-        } else {
-            trList[exists].classList.remove('tr-blink');
-            newTrArray.push(trList[exists]);
         }
-    }
+    } else {
+        for (let i = 0; i < trListLength; i++) {
+            //Change NodeList of trs for array 
+            trListArray[i] = Array.from(trListArray[i].childNodes);
+            let childLength = trListArray[i].length;
+    
+            for (let j = 0; j < childLength; j++) {
+                //Change array of tds for array of textContent 
+                //of that tds
+                trListArray[i][j] = trListArray[i][j].textContent; 
+            }
+        }
+    
+        for (let i = 0; i < gamesLength; i++) {
+            let exists = trListArray.findIndex(arr => arr.includes(games[i][4]));
+            let bet = trListArray.findIndex(arr => arr.includes(games[i][5]));
+    
+            if (exists === -1 || exists !== bet) {
+                newTrArray.push(createNewTr(games[i]));
+            } else {
+                trList[exists].classList.remove('tr-blink');
+                newTrArray.push(trList[exists]);
+            }
+        }
+    }   
     
     return newTrArray;
 }
