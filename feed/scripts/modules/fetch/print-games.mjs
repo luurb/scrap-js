@@ -1,86 +1,97 @@
 //Function create new body of games table
 function createNewTableBody(games) {
     let table = document.querySelector('.main-table__table');
-    let tbody = table.querySelector('tbody');
-    let tr = tbody.querySelectorAll('tr'); 
+    let oldTbody = table.querySelector('tbody');
+    let oldTrList = oldTbody.querySelectorAll('tr'); 
     
-    let newGames = findNewGames(games, tr);
-    tbody.remove();
-    tbody = document.createElement('tbody');
-    let gamesLength = games.length;
+    let newTrList = findNewGames(games, oldTrList);
+    let newTbody = document.createElement('tbody');
+    let trLength = newTrList.length;
 
-    for (let i = 0; i < gamesLength; i++) {
-        tr = document.createElement('tr');
-        let td;
-        for (let j = 0; j < games[i].length; j++) {
-            td = document.createElement('td');
-            //Set link for teams
-            if (j === 4) {
-                let a = document.createElement('a');
-                a.setAttribute("href", "https://www.oddsportal.com/search/");
-                a.setAttribute("target", "_blank");
-                a.textContent = games[i][j];
-                td.appendChild(a);
-            } else if (j === 2) {
-                td.innerHTML = '<span class="main-table__sport-span">' 
-                + games[i][j] + '</span>';
-            } else {
-                td.textContent = games[i][j];
-            }
-            tr.appendChild(td);
-        }
-        td = document.createElement('td');
-        td.innerHTML = 
-        `<label>
-            <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
-            <span class="main-table__span main-table__valuebets-span">Add</span>
-        </label>
-        <label>
-            <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
-            <span class="main-table__span main-table__valuebets-span">Del</span>
-        </label>`;
-        tr.appendChild(td);
-        tbody.appendChild(tr);
+    for (let i = 0; i < trLength; i++) {
+        newTbody.appendChild(newTrList[i]);
     }
-
-    table.appendChild(tbody);
-    tr = tbody.querySelectorAll('tr');
-
-    //Add blink animation for new games
-    for (let i = 0; i < newGames.length; i++) {
-        tr[newGames[i]].style.animation = '2s blinker 0s linear 2';
-    }
+    oldTbody.remove();
+    table.appendChild(newTbody);
 }
 
 //Function find index of games that are new and save
 //this index in newGames array
-function findNewGames(games, tr) {
-    let td;
-    let newGames = [];
-    let iter = 0;
-    let check;
+function findNewGames(games, trList) {
+    let trListArray = Array.from(trList);
     let gamesLength = games.length;
-    let trLength = tr.length;
+    let trListLength = trListArray.length;
+    let newTrArray = [];
+
+    for (let i = 0; i < trListLength; i++) {
+        trListArray[i] = Array.from(trListArray[i].childNodes);
+    }
 
     for (let i = 0; i < gamesLength; i++) {
-        check = 0;
-        //If table is empty break loop
-        if (tr.length === 0) 
-            break;
-        for (let j = 0; j < trLength; j++) {
-            td = tr[j].querySelectorAll('td');
-            if (td[4].textContent === games[i][4] && 
-                td[5].textContent === games[i][5]) {
-                check = 1;
-                break;
-            }
-        }
-        if (check === 0) {
-            newGames[iter] = i;
-            iter++;
+        let exists = trListArray.findIndex(arr => arr.includes(games[i][4]));
+        let bet = trListArray.findIndex(arr => arr.includes(games[i][5]));
+
+        if (exists === -1 || exists !== bet) {
+            newTrArray.push(createNewTr(games[i]));
+        } else {
+            trList[exists].classList.remove('tr-blink');
+            newTrArray.push(trList[exists]);
         }
     }
-    return newGames;
+    
+    return newTrArray;
+}
+
+//Function create new row for valubets table with data 
+//from game object
+function createNewTr(game) {
+    let gameLength = game.length;
+    let tr = document.createElement('tr');
+
+    for (let i = 0; i < gameLength; i++) {
+        let td = document.createElement('td');
+        switch (i) {
+            case 0: {
+                td.innerHTML = '<i class="fa-regular fa-clock"></i>' +
+                '<span class="main-table__valuebets-clock"> < 1 min</span>';
+                break;
+            }
+            case 2: {
+                td.innerHTML = '<span class="main-table__sport-span">' 
+                + game[i] + '</span>';
+                break;
+            }
+            case 4: {
+                let a = document.createElement('a');
+                a.setAttribute("href", "https://www.oddsportal.com/search/");
+                a.setAttribute("target", "_blank");
+                a.textContent = game[i];
+                td.appendChild(a);
+                break;
+            }
+            default:
+                td.textContent = game[i];
+        }
+        tr.appendChild(td);
+    }
+    let td = document.createElement('td');
+    td.innerHTML = 
+    `<label>
+        <input type="checkbox" class="main-table__checkbox main-table__checkbox--add none">                                           
+        <span class="main-table__span main-table__valuebets-span">Add</span>
+    </label>
+    <label>
+        <input type="checkbox" class="main-table__checkbox main-table__checkbox--del none">
+        <span class="main-table__span main-table__valuebets-span">Del</span>
+    </label>`;
+    tr.appendChild(td);
+    tr.className = 'tr-blink';
+
+    return tr;  
+}
+
+function getClockTime(tbody) {
+
 }
 
 export {createNewTableBody};
