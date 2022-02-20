@@ -1,7 +1,7 @@
 @use '../../../../../../config/breakpoints';
 
 
-@media (max-width: breakpoints.$tablets) {
+@media (max-width: breakpoints.$desktop-mid) {
     .main-table__sport-span {
         display: none;
     }

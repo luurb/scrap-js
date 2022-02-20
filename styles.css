@@ -346,13 +346,13 @@ button, select, input {
   background: #cdcdcd;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1430px) {
   .main-table__img {
     display: inline-block;
     width: 20px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1430px) {
   .main-table__sport-span {
     display: none;
   }
