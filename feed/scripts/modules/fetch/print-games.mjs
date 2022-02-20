@@ -2,17 +2,20 @@
 function createNewTableBody(games) {
     let table = document.querySelector('.main-table__table');
     let oldTbody = table.querySelector('tbody');
-    let oldTrList = oldTbody.querySelectorAll('tr'); 
+    let oldTrList = oldTbody.cloneNode(true).querySelectorAll('tr'); 
     
     let newTrList = findNewGames(games, oldTrList);
-    let newTbody = document.createElement('tbody');
+    let newTbody = oldTbody.cloneNode();
     let trLength = newTrList.length;
 
     for (let i = 0; i < trLength; i++) {
         newTbody.appendChild(newTrList[i]);
     }
+
+    if (oldTrList.length != 0)
+        newTbody.className = 'tbody-blink';
     oldTbody.remove();
-    table.appendChild(newTbody);
+    table.appendChild(newTbody);   
 }
 
 //Function find index of games that are new and save
@@ -45,10 +48,14 @@ function findNewGames(games, trList) {
             let bet = trListArray.findIndex(arr => arr.includes(games[i][5]));
     
             if (exists === -1 || exists !== bet) {
-                newTrArray.push(createNewTr(games[i]));
+                let tr = createNewTr(games[i]);
+                tr.className = 'tr-add-blink';
+                newTrArray.push(tr);
             } else {
-                trList[exists].classList.remove('tr-blink');
-                newTrArray.push(trList[exists]);
+                let tr = trList[exists];
+                tr.classList.remove('tr-add-blink');
+                //tr = updateClockTime(tr);
+                newTrArray.push(tr);
             }
         }
     }   
@@ -99,13 +106,16 @@ function createNewTr(game) {
         <span class="main-table__span main-table__valuebets-span">Del</span>
     </label>`;
     tr.appendChild(td);
-    tr.className = 'tr-blink';
 
     return tr;  
 }
 
-function getClockTime(tbody) {
+function getClockTime(tr) {
+    let time = tr[0];
 
+    if (time == '') {
+
+    }
 }
 
 export {createNewTableBody};

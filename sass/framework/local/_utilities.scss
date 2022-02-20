@@ -18,8 +18,12 @@
     display: none;
 }
 
-.tr-blink {
+.tr-delete-blink {
     animation: 2s blinker 0s linear 1;
+}
+
+.tr-add-blink {
+    animation: 2s blinker 1s linear 1;
 }
 
 .tbody-blink {

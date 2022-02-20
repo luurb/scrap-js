@@ -10,7 +10,6 @@ function initTimer(interval, callback) {
     printTimer();
     makeRequest = callback;
     iter = setInterval(setTimer, 1000);
-
 }
 
 function printTimer() {

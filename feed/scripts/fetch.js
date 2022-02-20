@@ -3,6 +3,7 @@ import * as CountDown from './modules/fetch/count-down.mjs';
 
 let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
+let counter;
 
 /*function makeRequest() {
     fetch('./feed/json.php')
@@ -51,7 +52,7 @@ function makeRequest() {
         })
         .then(response => {
             Print.print(response);
-            CountDown.initTimer(2000000, makeRequest);
+            let counter = CountDown.initTimer(10000, makeRequest);
         })
         .catch(e => {
             if (e.name == 'NetworkError') {
@@ -64,12 +65,19 @@ function makeRequest() {
         });
 }
 
+//Prevent usert from multiple clicks on refresh button
+let clicked = false;
+
 //Refresh timer and add some blinking to tbody table
 refreshButton.addEventListener('click', () => {
-    CountDown.clearCountDown();
-    setTimeout(makeRequest, 1000);
-    let tbody = document.querySelector('.main-table__table tbody');
-    tbody.className = 'tbody-blink';
+    if (!clicked) {
+        clicked = true;
+        CountDown.clearCountDown();
+        setTimeout(makeRequest, 1000);
+        setTimeout(() => {
+            clicked = false;
+        }, 2000);
+    }
 });
 
 makeRequest();

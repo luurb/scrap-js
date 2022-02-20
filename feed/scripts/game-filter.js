@@ -27,7 +27,7 @@ function hideGame(game, tr) {
     DbConnect.dbConnect( db => {
         DbOperation.addGame({game: game}, db);
     });
-    tr.className = 'tr-blink';
+    tr.className = 'tr-delete-blink';
     setTimeout(() => {
         tr.remove();
     }, 1000);
