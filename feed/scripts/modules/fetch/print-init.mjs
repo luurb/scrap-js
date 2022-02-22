@@ -7,7 +7,9 @@ import {hideGamesDbFilter, getUpdatedArr} from
 
 
 //Function print main table with games
-async function print(gamesArr) {
+async function initPrint(gamesArr) {
+    let tbody = document.querySelector('tbody');
+    tbody.className = 'tbody-blink';
     let hideGamesDb = await dbConnectAwait('hide_games');
     if (hideGamesDb) {
         let filteredGamesArr = await hideGamesDbFilter(
@@ -29,4 +31,4 @@ async function print(gamesArr) {
     }
 }
 
-export {print};
+export {initPrint};

@@ -1,10 +1,10 @@
-import * as Print from './modules/fetch/print-init.mjs';
-import * as CountDown from './modules/fetch/count-down.mjs';
+import {initPrint} from './modules/fetch/print-init.mjs';
+import {initTimer, clearCountDown} from './modules/fetch/count-down.mjs';
 
 let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
 
-function makeRequest() {
+/*function makeRequest() {
     fetch('./feed/json.php')
         .then(response => {
             if (! response.ok) {
@@ -20,8 +20,8 @@ function makeRequest() {
         })
         .then(response => {
             response = JSON.parse(response);
-            Print.print(response);
-            CountDown.initTimer(Number(time.textContent) * 60000, makeRequest);
+            initPrint(response);
+            initTimer(Number(time.textContent) * 60000, makeRequest);
         })
         .catch(e => {
             if (e.name == 'NetworkError') {
@@ -32,10 +32,10 @@ function makeRequest() {
                 console.error(e);
             }
         });
-}
+}*/
 
 //Testing
-/*function makeRequest() {
+function makeRequest() {
     fetch('./feed/games.json')
         .then(response => {
             if (! response.ok) {
@@ -50,8 +50,8 @@ function makeRequest() {
             return response.json();
         })
         .then(response => {
-            Print.print(response);
-            CountDown.initTimer(500000, makeRequest);
+            initPrint(response);
+            initTimer(500000, makeRequest);
         })
         .catch(e => {
             if (e.name == 'NetworkError') {
@@ -62,7 +62,7 @@ function makeRequest() {
                 console.error(e);
             }
         });
-}*/
+}
 
 //Prevent usert from multiple clicks on refresh button
 let clicked = false;
@@ -71,8 +71,8 @@ let clicked = false;
 refreshButton.addEventListener('click', () => {
     if (!clicked) {
         clicked = true;
-        CountDown.clearCountDown();
-        setTimeout(makeRequest, 1000);
+        clearCountDown();
+        makeRequest();
         setTimeout(() => {
             clicked = false;
         }, 2000);

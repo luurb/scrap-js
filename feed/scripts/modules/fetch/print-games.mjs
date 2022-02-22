@@ -8,11 +8,16 @@ function printNewTableBody(gamesArr) {
     let trLength = newTrList.length;
 
     for (let i = 0; i < trLength; i++) {
-        newTbody.appendChild(newTrList[i]);
+        let tr = newTrList[i];
+        newTbody.appendChild(tr);
+        //Nedded to remove class for animation to be able
+        //to add another animation to that element later
+        if (tr.className === 'tr-add-blink') {
+            setTimeout(() => {
+                newTrList[i].classList.remove('tr-add-blink');
+            }, 4000)
+        }
     }
-
-    if (oldTbody.childNodes.length != 0)
-        newTbody.className = 'tbody-blink';
 
     oldTbody.remove();
     table.appendChild(newTbody); 

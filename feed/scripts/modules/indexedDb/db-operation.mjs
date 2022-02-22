@@ -28,7 +28,6 @@ function displayData(db, dbName) {
 //Function delete games which are in IndexedDB from games array
 //Return promise which then resolve with updated games array
 function hideGamesDbFilter(db, gamesArr, dbName) {
-    displayData(db, dbName);
     let transaction = db.transaction([dbName +'_os'], 'readwrite');
     let objectStore = transaction.objectStore(dbName +'_os');
     return new Promise((resolve,reject) => {
@@ -66,7 +65,6 @@ function hideGamesDbFilter(db, gamesArr, dbName) {
 //Function updates games array and also updates games IndexedDb
 //Return promise which then resolve with games Array ready to print
 function getUpdatedArr(db, gamesArr, dbName) {
-    displayData(db, dbName);
     let transaction = db.transaction([dbName +'_os'], 'readwrite');
     let objectStore = transaction.objectStore(dbName +'_os');
     let oldGamesArr = [];
