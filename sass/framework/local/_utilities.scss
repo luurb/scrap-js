@@ -23,9 +23,9 @@
 }
 
 .tr-add-blink {
-    animation: 2s blinker 1s linear 1;
+    animation: 2s blinker 2s linear 1;
 }
 
 .tbody-blink {
-    animation: 1s blinker 0s linear 1;
+    animation: 2s tbody-blinker 0s ease-out 1;
 }

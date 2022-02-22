@@ -9,9 +9,9 @@
     <?php include('includes/html/css.html'); ?>
 </head>
 <body>
-    <script type="module" src="feed/scripts/fetch.js"></script>
+    <script type="module" src="feed/scripts/fetch.js" async></script>
     <script src="feed/scripts/refresh-option.js" defer></script>
-    <script type="module" src="feed/scripts/game-filter.js"></script>
+    <script type="module" src="feed/scripts/game-filter.js" defer></script>
 
     <?php include('includes/html/header.html'); ?>
     <main class="main">
