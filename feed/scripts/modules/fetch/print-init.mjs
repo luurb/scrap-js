@@ -1,21 +1,31 @@
-import * as AddIcons from './add-icons.mjs';
-import * as Filter from '../gameFilter/hide-games.mjs';
-import * as Switch from './checked-switch.mjs'
-import * as PrintGames from './print-games.mjs';
+import {addSportIcon} from './add-icons.mjs';
+import {checkboxSwitch} from './checked-switch.mjs'
+import {printNewTableBody} from './print-games.mjs'; 
+import {dbConnectAwait} from '../indexedDb/db-connect.mjs';
+import {hideGamesDbFilter, getUpdatedArr} from 
+'../indexedDb/db-operation.mjs';
 
 
 //Function print main table with games
-async function print(games) {
-    let db = await Filter.findGamesToHide(games);
-    //let newGames = findNewGames(games, tr);
-    if (db) {
-        let response = await Filter.filterGames(db, games);
-        if (response) PrintGames.createNewTableBody(response);
-        let tbody = document.querySelector('.main-table__table tbody');
-        AddIcons.addSportIcon();
-        tbody.addEventListener('click', e => {
-            Switch.checkboxSwitch(e);
-        });
+async function print(gamesArr) {
+    let hideGamesDb = await dbConnectAwait('hide_games');
+    if (hideGamesDb) {
+        let filteredGamesArr = await hideGamesDbFilter(
+            hideGamesDb, gamesArr, 'hide_games');
+        if (filteredGamesArr) {
+            dbConnectAwait('games')
+            .then(gamesDb => 
+                getUpdatedArr(gamesDb, filteredGamesArr, 'games')
+            )
+            .then(updatedGamesArr => {
+                printNewTableBody(updatedGamesArr);
+                let tbody = document.querySelector('.main-table__table tbody');
+                addSportIcon();
+                tbody.addEventListener('click', e => {
+                    checkboxSwitch(e);
+                });
+            });
+        }
     }
 }
 

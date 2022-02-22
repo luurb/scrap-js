@@ -1,6 +1,5 @@
-import * as DbConnect from './modules/indexedDb/db-connect.mjs';
-import * as DbOperation from './modules/indexedDb/db-operation.mjs';
-import * as Game from './modules/classes/Game.mjs';
+import {dbConnectAwait} from './modules/indexedDb/db-connect.mjs';
+import {addToDb} from './modules/indexedDb/db-operation.mjs';
 
 let filterBtn = document.querySelector('.main-table__button');
 filterBtn.addEventListener('click', () => {
@@ -9,24 +8,16 @@ filterBtn.addEventListener('click', () => {
 
     for (let i = 0; i < checkBoxLength; i++) {
         let tr = checkbox[i].parentNode.parentNode.parentNode;
-        let game = createGame(tr);
         let condition = checkbox[i].className.indexOf('del');
+        let game = createGame(tr);
         (condition === -1) ? addGametoHistory(game, tr) : hideGame(game, tr);
     }
 });
 
-function createGame(tr) {
-    let game = new Game.Game(
-        tr.childNodes[4].textContent,
-        tr.childNodes[5].textContent, 
-        tr.childNodes[3].textContent);
-    return game;
-}
-
 function hideGame(game, tr) {
-    DbConnect.dbConnect( db => {
-        DbOperation.addGame({game: game}, db);
-    });
+    dbConnectAwait('hide_games')
+    .then(hideGamesDb => 
+        addToDb({game: game}, hideGamesDb, 'hide_games'));
     tr.className = 'tr-delete-blink';
     setTimeout(() => {
         tr.remove();
@@ -39,4 +30,14 @@ function addGametoHistory(game, tr) {
     /*
     Function add game to bet history on server side db
     */
+}
+
+function createGame(tr) {
+    let game = [];
+    let tdList = tr.querySelectorAll('td');
+    game['date'] = tdList[3].textContent;
+    game['teams'] = tdList[4].textContent;
+    game['bet'] = tdList[5].textContent;
+
+    return game;
 }

@@ -5,7 +5,7 @@ let makeRequest;
 
 function initTimer(interval, callback) {
     seconds = interval / 1000;
-    minutes = Math.round(seconds / 60);
+    minutes = Math.floor(seconds / 60);
     seconds = seconds - minutes * 60;
     printTimer();
     makeRequest = callback;

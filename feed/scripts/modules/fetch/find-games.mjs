@@ -1,22 +1,12 @@
-import * as DbConnect from '../indexedDb/db-connect.mjs';
-
-function findGamesToHide() {
-    return new Promise((resolve, reject) => {
-        DbConnect.dbConnect(db => {
-            resolve(db);
-        });
-    });
-}
-
 //Function delete games which are in IndexedDB from JSON file
-function filterGames(db, games) {
-    let transaction = db.transaction(['games_os'], 'readwrite');
-    let objectStore = transaction.objectStore('games_os');
+function filterGames(db, games, dbName) {
+    let transaction = db.transaction([dbName +' _os'], 'readwrite');
+    let objectStore = transaction.objectStore(dbName +' _os');
     return new Promise((resolve,reject) => {
         objectStore.openCursor().onsuccess = e => {
             let cursor = e.target.result;
             if (cursor) {
-                let game = cursor.value.game;
+                let game = cursor.value.object;
                 let date = game.date;
                 date += ":00";
                 date.replace(" ", "T");
@@ -44,4 +34,4 @@ function filterGames(db, games) {
     });
 }
 
-export {findGamesToHide, filterGames};
+export {filterGames};

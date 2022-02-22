@@ -3,9 +3,8 @@ import * as CountDown from './modules/fetch/count-down.mjs';
 
 let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
-let counter;
 
-/*function makeRequest() {
+function makeRequest() {
     fetch('./feed/json.php')
         .then(response => {
             if (! response.ok) {
@@ -33,10 +32,10 @@ let counter;
                 console.error(e);
             }
         });
-}*/
+}
 
 //Testing
-function makeRequest() {
+/*function makeRequest() {
     fetch('./feed/games.json')
         .then(response => {
             if (! response.ok) {
@@ -52,7 +51,7 @@ function makeRequest() {
         })
         .then(response => {
             Print.print(response);
-            let counter = CountDown.initTimer(10000, makeRequest);
+            CountDown.initTimer(500000, makeRequest);
         })
         .catch(e => {
             if (e.name == 'NetworkError') {
@@ -63,7 +62,7 @@ function makeRequest() {
                 console.error(e);
             }
         });
-}
+}*/
 
 //Prevent usert from multiple clicks on refresh button
 let clicked = false;
