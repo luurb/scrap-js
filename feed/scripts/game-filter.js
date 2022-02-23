@@ -18,6 +18,7 @@ function hideGame(game, tr) {
     dbConnectAwait('hide_games')
     .then(hideGamesDb => 
         addToDb({game: game}, hideGamesDb, 'hide_games'));
+        
     tr.className = 'tr-delete-blink';
     setTimeout(() => {
         tr.remove();

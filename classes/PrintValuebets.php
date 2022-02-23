@@ -26,7 +26,7 @@ class PrintValuebets
         <table class="main-table__table main-table__valuebets-table">
             <thead>
                 <tr>
-                    <th scope="colgroup"></th>
+                    <th scope="colgroup">Delay</th>
                     <th scope="colgroup">Bookmaker</th>
                     <th scope="colgroup">Sport</th>
                     <th scope="colgroup">Date and time</th>

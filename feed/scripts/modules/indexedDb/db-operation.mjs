@@ -81,6 +81,7 @@ function getUpdatedArr(db, gamesArr, dbName) {
                 objectStore.clear();
                 let arrLength = gamesArr.length;
                 let updatedGamesArr = [];
+
                 for (let i = 0; i < arrLength; i++) {
                     let exists = oldGamesArr.findIndex(arr => 
                         arr.includes(gamesArr[i][4]));
@@ -93,6 +94,7 @@ function getUpdatedArr(db, gamesArr, dbName) {
                         objectStore.add({game: oldGamesArr[exists]});
                     } else {
                         gamesArr[i].push('tr-add-blink');
+                        gamesArr[i].push(new Date(Date.now()));
                         updatedGamesArr.push(gamesArr[i]);
                         objectStore.add({game: gamesArr[i]});
                     }

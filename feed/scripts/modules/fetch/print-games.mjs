@@ -34,12 +34,13 @@ function createNewTrList(gamesArr) {
         let game = gamesArr[i];
         let gameLength = gamesArr[i].length;
         
-        for (let j = 0; j < gameLength - 1; j++) {
+        for (let j = 0; j < gameLength - 2; j++) {
             let td = document.createElement('td');
             switch (j) {
                 case 0: {
                     td.innerHTML = '<i class="fa-regular fa-clock"></i>' +
-                    '<span class="main-table__valuebets-clock"> < 1 min</span>';
+                    '<span class="main-table__valuebets-clock"> ' + 
+                    getClockTime(game[9]) + '</span>';
                     break;
                 }
                 case 2: {
@@ -78,14 +79,12 @@ function createNewTrList(gamesArr) {
     return trList;
 }
 
-function getClockTime(tr) {
-    let time = tr.childNodes[0].textContent;
-    console.log(time);
+function getClockTime(time) {
+    let timeDiff = Math.floor((new Date(Date.now()) - time) / 60000);
+    if (timeDiff == 0)
+        return '< 1 min';
 
-    if (time == '< 1 min') {
-
-    }
-    return tr;
+    return timeDiff + ' min';
 }
 
 export {printNewTableBody};
