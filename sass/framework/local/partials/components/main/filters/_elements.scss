@@ -3,11 +3,16 @@
 @forward 'filters__/wrapper';
 @forward 'filters__/header';
 @forward 'filters__/stats';
-@forward 'filters__/button';
 
 //Valuebets page filters
-@forward 'filters__/refresh-num';
-@forward 'filters__/refresh-wrapper';
+@forward 'filters__/valuebets/refresh-num';
+@forward 'filters__/valuebets/refresh-wrapper';
+@forward 'filters__/valuebets/button';
+@forward 'filters__/valuebets/sorting/caret';
+@forward 'filters__/valuebets/sorting/caret-down';
+@forward 'filters__/valuebets/sorting/select';
+@forward 'filters__/valuebets/sorting/sorting';
+
 
 
 //History page filters

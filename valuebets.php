@@ -58,6 +58,24 @@
                         <button class="filters__button filters__submit filters__refresh">Refresh</button>
                     </div>
                 </div>
+                <span class="filters__header">Sorting</span>
+                <div class="filters__stats">
+                    <div class="filters__box">
+                        <span class="filters__header filters__header--stat">Sorting options</span>
+                        <div class="filters__sorting">
+                            <select class="filters__select">
+                                <option>Delay</option>
+                                <option>Date</option>
+                                <option>Odd</option>
+                                <option>Value</option>
+                            </select>
+                            <span>
+                                <i class="fa-solid fa-caret-up filters__caret"></i>
+                                <i class="fa-solid fa-caret-down filters__caret filters__caret-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

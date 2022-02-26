@@ -3,15 +3,6 @@
 @use '/var/www/html/scrap_tests/scrap/sass/framework/config/colors';
 
 
-/*@media (max-width: breakpoints.$desktop) {
-    .main-table__valuebets-table {
-        th:nth-child(1),
-        td:nth-child(1) {
-            display: none;
-        }
-    }
-}*/
-
 @media (max-width: breakpoints.$desktop-mid) {
     .main-table__valuebets-table {
         th {

@@ -1,0 +1,13 @@
+@use '../../../../../../../../config/colors';
+
+.filters__caret {
+    height: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+    color: #6c6c6c;
+}
+
+.filters__caret:hover {
+    color: colors.$black1;
+}
