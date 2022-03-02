@@ -68,8 +68,8 @@
                                 <option>Value</option>
                             </select>
                             <span>
-                                <i class="fa-solid fa-caret-up filters__caret"></i>
-                                <i class="fa-solid fa-caret-down filters__caret filters__caret-down"></i>
+                                <i title="asceding" class="fa-solid fa-caret-up filters__caret"></i>
+                                <i title="descending" class="fa-solid fa-caret-down filters__caret filters__caret-down"></i>
                             </span>
                         </div>
                     </div>

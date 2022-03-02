@@ -4,7 +4,7 @@ import {initTimer, clearCountDown} from './modules/fetch/count-down.mjs';
 let time = document.querySelector('.filters__refresh-num');
 let refreshButton = document.querySelector('.filters__refresh');
 
-/*function makeRequest() {
+function makeRequest() {
     fetch('./feed/json.php')
         .then(response => {
             if (! response.ok) {
@@ -32,10 +32,10 @@ let refreshButton = document.querySelector('.filters__refresh');
                 console.error(e);
             }
         });
-}*/
+}
 
 //Testing
-function makeRequest() {
+/*function makeRequest() {
     fetch('./feed/games.json')
         .then(response => {
             if (! response.ok) {
@@ -62,7 +62,7 @@ function makeRequest() {
                 console.error(e);
             }
         });
-}
+}*/
 
 //Prevent usert from multiple clicks on refresh button
 let clicked = false;
