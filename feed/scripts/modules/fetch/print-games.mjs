@@ -1,3 +1,5 @@
+import {addSportIcon} from './add-icons.mjs';
+
 //Function create new body of games table
 function printNewTableBody(gamesArr) {
     let table = document.querySelector('.main-table__table');
@@ -21,6 +23,7 @@ function printNewTableBody(gamesArr) {
 
     oldTbody.remove();
     table.appendChild(newTbody); 
+    addSportIcon();
 }
 
 //Function create new row for valubets table with data 
@@ -87,4 +90,4 @@ function getClockTime(time) {
     return timeDiff + ' min';
 }
 
-export {printNewTableBody};
+export {printNewTableBody, createNewTrList};

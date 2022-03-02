@@ -93,7 +93,7 @@
                         <span class="filters__value"><?=$_SESSION['time_avg_value'];?>%</span>
                     </div>
                     <div class="filters__box">
-                        <span class="ffilters__header filters__header--stat">Time range </span>
+                        <span class="filters__header filters__header--stat">Time range </span>
                         <form method="GET" action="bet_history.php">
                             <input type="date" name="first_date" class="filters__input">
                             <span class="ftilers__header filters__header--stat">/</span>

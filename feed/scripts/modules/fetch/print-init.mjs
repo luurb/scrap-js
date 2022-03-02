@@ -1,4 +1,3 @@
-import {addSportIcon} from './add-icons.mjs';
 import {checkboxSwitch} from './checked-switch.mjs'
 import {printNewTableBody} from './print-games.mjs'; 
 import {dbConnectAwait} from '../indexedDb/db-connect.mjs';
@@ -22,7 +21,6 @@ async function initPrint(gamesArr) {
             .then(updatedGamesArr => {
                 printNewTableBody(updatedGamesArr);
                 let tbody = document.querySelector('.main-table__table tbody');
-                addSportIcon();
                 tbody.addEventListener('click', e => {
                     checkboxSwitch(e);
                 });

@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="includes/css/all.min.css">
     <title>Valuescrap</title>
     <?php include('includes/html/css.html'); ?>
+    <?php include('includes/html/js.html'); ?>
 </head>
 <body>
-    <script type="module" src="feed/scripts/fetch.js" async></script>
-    <script src="feed/scripts/refresh-option.js" defer></script>
-    <script type="module" src="feed/scripts/game-filter.js" defer></script>
-
     <?php include('includes/html/header.html'); ?>
     <main class="main">
         <div class="nav-box">
@@ -64,6 +61,7 @@
                         <span class="filters__header filters__header--stat">Sorting options</span>
                         <div class="filters__sorting">
                             <select class="filters__select">
+                                <option disabled selected hidden>Choose</option>
                                 <option>Delay</option>
                                 <option>Date</option>
                                 <option>Odd</option>

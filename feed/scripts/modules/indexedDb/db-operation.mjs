@@ -25,6 +25,25 @@ function displayData(db, dbName) {
     };
 }
 
+function getGamesArr(db, dbName) {
+    let transaction = db.transaction(dbName +'_os');
+    let objectStore = transaction.objectStore(dbName +'_os');
+    let gamesArr = [];
+    return new Promise((resolve,reject) => {
+        objectStore.openCursor().onsuccess = e => {
+            let cursor = e.target.result;
+            if (cursor) {
+                let game = cursor.value.game;
+                gamesArr.push(game);
+                cursor.continue();
+            }
+            //Resolve promise with filtered JSON file after loop thru 
+            //every index in IndexedDB
+            if (!cursor) resolve(gamesArr);
+        };
+    });  
+}
+
 //Function delete games which are in IndexedDB from games array
 //Return promise which then resolve with updated games array
 function hideGamesDbFilter(db, gamesArr, dbName) {
@@ -75,7 +94,7 @@ function getUpdatedArr(db, gamesArr, dbName) {
                 oldGamesArr.push(cursor.value.game);
                 cursor.continue();
             }
-            //Resolve promise with filtered JSON file after loop thru 
+            //Resolve promise with filtered JSON file after loop through 
             //every index in IndexedDB
             if (!cursor) {
                 objectStore.clear();
@@ -106,4 +125,4 @@ function getUpdatedArr(db, gamesArr, dbName) {
 }
 
 
-export{addToDb, displayData, hideGamesDbFilter, getUpdatedArr};
+export{addToDb, displayData, hideGamesDbFilter, getUpdatedArr, getGamesArr};
