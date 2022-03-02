@@ -1,5 +1,6 @@
 import {checkboxSwitch} from './checked-switch.mjs'
 import {printNewTableBody} from './print-games.mjs'; 
+import {sort} from '../sorting/sorting-init.mjs';
 import {dbConnectAwait} from '../indexedDb/db-connect.mjs';
 import {hideGamesDbFilter, getUpdatedArr} from 
 '../indexedDb/db-operation.mjs';
@@ -19,7 +20,7 @@ async function initPrint(gamesArr) {
                 getUpdatedArr(gamesDb, filteredGamesArr, 'games')
             )
             .then(updatedGamesArr => {
-                printNewTableBody(updatedGamesArr);
+                printNewTableBody(sort(updatedGamesArr));
                 let tbody = document.querySelector('.main-table__table tbody');
                 tbody.addEventListener('click', e => {
                     checkboxSwitch(e);
