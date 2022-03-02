@@ -15,13 +15,17 @@ let columnNumObj = {
 carets.forEach(caret => {
     caret.addEventListener('click', () => {
         let columnToSortBy = select.options[select.selectedIndex].textContent;
-        console.log('Select element value: ' + columnToSortBy);
         if (columnToSortBy !== 'Choose') {
             let columnNum = columnNumObj[columnToSortBy];
             let sortDirection = -1;
             if (caret.classList.contains('filters__caret-down')) 
                 sortDirection = 1;
 
+            carets.forEach(clickedCaret => {
+                clickedCaret.classList.remove('sorted');
+            });
+            caret.classList.add('sorted');
+            
             dbConnectAwait('games')
             .then(gamesDb => getGamesArr(gamesDb, 'games'))
             .then(gamesArr => {

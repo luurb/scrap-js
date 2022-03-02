@@ -73,6 +73,10 @@
   animation: 2s tbody-blinker 0s ease-out 1;
 }
 
+.sorted {
+  color: #111 !important;
+}
+
 a {
   text-decoration: none;
   transition: all 0.3s ease;
@@ -699,7 +703,7 @@ button, select, input {
   font-size: 24px;
   cursor: pointer;
   display: block;
-  color: #6c6c6c;
+  color: #cdcdcd;
 }
 
 .filters__caret:hover {

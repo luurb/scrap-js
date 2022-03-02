@@ -1,3 +1,5 @@
+@use '../config/colors';
+
 .flex {
     display: flex;
 }
@@ -28,4 +30,8 @@
 
 .tbody-blink {
     animation: 2s tbody-blinker 0s ease-out 1;
+}
+
+.sorted {
+    color: colors.$black1 !important;
 }
