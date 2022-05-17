@@ -6,8 +6,8 @@ namespace classes;
 class IDbInit
 {
     protected $addr = "localhost";
-    protected $login = "luckyluk";
-    protected $password = "Hst13Har@";
+    protected $login = "";
+    protected $password = "";
     protected $db_name = "games";
 
     public function dbConnect()
